@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//这种继承方式思想是对的，但是有缺陷，导致所有实例化的原型对象指向同一个地址
+		// 对象：
+		let obj = {
+			head : 1,
+			eyes : 2,
+			legs : 2,
+			say : function () {console.log('chi')},
+			eat : function () {console.log('he')},
+		}
+			
+
+		function Chinese () {
+			this.skin = 'yellow';
+			this.language = '汉语';
+		}
+
+
+		// 原型
+		// console.log( Chinese.prototype );
+		Chinese.prototype = obj;
+		Chinese.prototype.constructor = Chinese;
+		console.log( Chinese.prototype );
+		// 实例化
+		let c1 = new Chinese();
+		console.log(c1);
+		c1.eat();
+
+
+
+
+		function Japanese () {
+			this.skin = 'yellow';
+			this.language = '日语';
+		}
+		// 1、赋值对象
+		Japanese.prototype = obj;
+		// 2、指回构造函数
+		Japanese.prototype.constructor = Japanese;
+		// 实例化
+		let j1 = new Japanese();
+		console.log(j1.head);
+		j1.eat();
+
+	</script>
+
+
+</body>
+</html>

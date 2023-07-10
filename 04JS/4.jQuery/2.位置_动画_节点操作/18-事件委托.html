@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18-事件委托</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        width: 500px;
+        height: 100px;
+        background-color: yellowgreen;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      img {
+        margin-right: 5px;
+      }
+      hr {
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>事件参数</h3>
+    <p>jQuery提供了节点直接删除自己的方法</p>
+
+    <hr />
+    <button class="add">添加元素</button>
+    <div class="box">
+      <img class="dog" src="./img/旺财.jpg" alt="" />
+      <img class="dog" src="./img/旺财.jpg" alt="" />
+      <img class="dog" src="./img/旺财.jpg" alt="" />
+      <img class="dog" src="./img/旺财.jpg" alt="" />
+    </div>
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+      // 1.减少事件注册
+      // $('.dog').click(function () {
+      //   $(this).remove()
+      // })
+      $('.box').on('click', '.dog', function () {
+        // console.log(this)
+        $(this).remove()
+      })
+
+      // 2.新增后代元素的事件绑定
+      $('.add').click(function () {
+        $('.box').append('<img class="doge" src="./img/旺财2.jpg" alt="" />')
+      })
+      
+      $('.box').on('click', '.doge', function () {
+        $(this).remove()
+        console.log(this)
+      })
+
+      // 3.原理是事件冒泡 阻止事件委托
+      $('.dog').click(function (e) {
+        e.stopPropagation()
+      })
+    </script>
+  </body>
+</html>

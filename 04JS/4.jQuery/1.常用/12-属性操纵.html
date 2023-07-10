@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>12-属性操纵</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>12-属性操纵</h3>
+    <p>jQuery 中封装了设置和读取网页元素属性的方法。</p>
+    <!-- 测试用标签 -->
+    <a href="#">黑马程序员</a>
+    <img src="" />
+    <!-- 导入 jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1. 赋值
+      $('a').attr('href', 'http://www.itheima.com/')
+      $('img').attr('src', 'http://www.itheima.com/images/logo.png')
+      $('img').attr('info', '黑马程序员')
+
+      // 2. 取值
+      let href = $('a').attr('href')
+      console.log('href:', href)
+      let info = $('img').attr('info')
+      console.log('info:', info)
+      // 3. 删除
+      $('a').removeAttr('href')
+      $('img').removeAttr('src')
+      $('img').removeAttr('info')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+		// 剩余参数：
+		function fun (...a) {console.log(a);}
+		fun(1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c');
+
+		function getSum (b,...a) {
+			let sum = 0;
+			for (let i = 0; i < a.length; i++) {// a = [1, 2, 3......]
+				sum = sum + a[i]
+			}
+			console.log(sum);
+		}
+		getSum(1, 2, 4,5);
+
+	</script>
+
+
+</body>
+</html>

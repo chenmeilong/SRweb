@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "moment": "^2.22.2"
+  },
+  "name": "3.day",
+  "version": "1.0.0",
+  "main": "01.格式化时间.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

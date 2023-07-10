@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text] {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <input type="password">
+    <script>
+        let input = document.querySelector('input')
+        // 当表单里面的值发生变化的时候触发，和 blur 不一样   
+        // input 事件  只要输入就会触发
+        // change 事件 是 离开表单时候才触发  并且要 值有变化
+        input.addEventListener('change', function () {
+            console.log(111)
+        })
+    </script>
+</body>
+
+</html>

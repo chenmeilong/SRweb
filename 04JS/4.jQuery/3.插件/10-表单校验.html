@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-表单验证</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      li {  
+        margin: 10px 0;
+      }
+      span.error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>10-表单验证插件</h3>
+    <p>基于 jQuery 的表单验证插件，验证用户在表单中填写的内容。</p>
+    <!-- 测试用标签 -->
+    <form action="">
+      <ul>
+        <li>
+          昵称:
+          <input
+            data-required
+            data-describedby="nickname-error"
+            data-description="nickname"
+            type="text"
+            name="nickname"
+          />
+          <span class="error" id="nickname-error"></span>
+        </li>
+        <li>
+          密码:
+          <input
+            data-required
+            data-pattern=".{6,}"
+            data-describedby="password-error"
+            data-description="password"
+            type="password"
+            name="password"
+          />
+          <span class="error" id="password-error"></span>
+        </li>
+        <li>
+          <label>
+            <input
+              data-required
+              data-describedby="agree-error"
+              data-description="agree"
+              type="checkbox"
+              value="true"
+              name="agree"
+            />
+            同意注册协议
+          </label>
+          <span class="error" id="agree-error"></span>
+        </li>
+        <li>
+          <button class="btn">提交</button>
+        </li>
+      </ul>
+    </form>
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <!-- 导入 validate插件 -->
+    <script src="./jquery-validate/jquery-validate.js"></script>
+    <script>
+      $('form').validate({
+        sendForm: false,
+        description: {
+          password: {
+            required: '密码不能为空!',
+            pattern: '密码的长度必须大于等于6!'
+          },
+          nickname: {
+            required: '昵称不能为空!'
+          },
+          agree: {
+            required: '必须同意用户协议!'
+          }
+        },
+        valid () {
+          console.log('验证成功')
+        },
+        invalid () {
+          console.log('验证失败')
+        }
+      })
+    </script>
+  </body>
+</html>

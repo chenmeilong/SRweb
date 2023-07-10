@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+		
+
+		// let arr = ['a', 'b', 'a', 'c', 'd', 'a', 'd', 'b', 'c', 'd', 'e']
+
+		// let newArr = [];
+
+		// // 遍历arr的每一个元素，在newArr中查找，如果找不到就把这个值添加进去
+		// for (let i = 0; i < arr.length; i++) {
+		// 	if ( newArr.indexOf(arr[i]) == -1 ) newArr.push(arr[i]);
+		// }
+		// console.log( newArr );
+
+
+		// let arr = [
+		//     	[23, 66, 33, 16],
+		//     	[19, 21, 49, 66, 123, 36],
+		//     	[78, 37, 89, 86]
+		// ]
+
+		// 求平均值
+		// 总和 / 个数
+		// let sum = 0;
+		// let count = 0;
+		// for (let i = 0; i < arr.length; i++) {
+		// 	// arr[i]又是一个数组
+		// 	for (let j = 0; j < arr[i].length; j++) {
+		// 		sum = sum + arr[i][j];
+		// 		count++;
+		// 	}
+		// }
+		// let avg = sum / count;
+		// console.log(avg);
+
+
+		let arr = [
+		    	[23, 66, 33, 16],
+		    	[19, 21, 49, 66, 123, 36],
+		    	[78, 37, 89, 86]
+		]
+		let max = arr[0][0];
+
+		for (let i = 0; i < arr.length; i++) {
+			// arr[i]
+			for (let j = 0; j < arr[i].length; j++) {
+				if ( max < arr[i][j] ) {
+					max = arr[i][j];
+				}
+			}
+		}
+
+		console.log(max);
+
+	</script>
+
+
+</body>
+</html>

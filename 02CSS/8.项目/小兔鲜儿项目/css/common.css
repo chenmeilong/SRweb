@@ -1,0 +1,382 @@
+.wrapper{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.shortcut{
+    background-color: #333333;
+}
+.shortcut .wrapper{
+    height: 52px;
+}
+
+.shortcut .wrapper ul{
+    float: right;
+}
+.shortcut .wrapper ul li{
+    float: left;
+}
+.shortcut .wrapper ul li a{
+
+    padding: 0 15px 0;
+    border-right: 1px solid #666666;
+    line-height: 52px;
+
+    font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #dcdcdc;
+}
+.shortcut .wrapper ul li:last-child a{
+    padding-left: 34px;
+    position: relative;
+    border: none;
+}
+.shortcut .wrapper ul li:last-child a::before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 1px;
+
+    padding-right: 8px;
+
+    width: 11px;
+	height: 16px;
+    background-image: url(../images/sprites.png);
+    background-position: -160px -70px;
+}
+
+ .header .wrapper{
+    margin: 30px auto;
+    height: 70px;
+ }
+
+ .header .wrapper h1 a{
+    float: left;
+    margin-left: 25px;
+    width: 207px;
+    height: 70px;
+    background-image: url(../images/logo.png);
+    background-size: cover;
+ }
+
+ .header .wrapper ul{
+    float: left;
+    margin-left: 45px;
+ }
+ .header .wrapper ul li{
+    float: left;
+    margin-right: 46px;
+ }
+ .header .wrapper ul li:last-child{
+    margin-right: 82px;
+ }
+ .header .wrapper ul li a{
+    font-family: PingFangSC-Regular;
+	font-size: 16px;
+    padding-bottom: 7px;
+	color: #333333;
+    line-height: 70px;
+ }
+ .header .wrapper ul li a:hover{
+    color: #27ba9b;
+    border-bottom: 1px solid #27ba9b;
+ }
+ .header .wrapper .search{
+    float: left;
+ }
+ .header .wrapper .search input{
+    margin-top: 24px;
+    padding-left: 31px;
+    width: 172px;
+	height: 30px;
+    border: none;
+    border-bottom: 2px solid #e7e7e7;
+ }
+
+ .header .wrapper .search .position{
+    position: relative;
+ }
+ 
+ .header .wrapper .search .position::before{
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 28px;
+
+	width: 18px;
+	height: 18px;
+    background-image: url(../images/sprites.png);
+    background-position: -79px -69px;
+ }
+ .header .wrapper .search input::placeholder{
+    font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #cccccc;
+ }
+
+ .header .wrapper .car{
+    float: right;
+    margin-top: 28px;
+    margin-right: 14px;
+
+    width: 23px;
+	height: 23px;
+    background-image: url(../images/sprites.png);
+    background-position: -120px -69px;
+ }
+ .header .wrapper .car .position{
+    position: relative;
+ }
+.header .wrapper .car span{
+    display: block;
+    z-index: 2;
+    width: 20px;
+	height: 15px;
+	background-color: #e26237;
+	border-radius: 8px;
+    text-align: center;
+    line-height: 15px;
+    font-family: PingFangSC-Medium;
+	font-size: 13px;
+	color: #ffffff;
+}
+
+.header .wrapper .car span{
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: -5px;
+}
+.contact .wrapper{
+    height: 300px;
+}
+.contact .wrapper dl{
+    float: left;
+    background-color: white;
+}
+.contact .wrapper dl dt{
+    font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #999999;
+    text-align: center;
+}
+
+
+.contact .wrapper .serve{
+    margin: 78px 112px 0 58px;
+}
+.contact .wrapper .focus{
+    margin: 78px 93px 0 0;
+}
+.contact .wrapper dl dd{
+    float: left;
+}
+.contact .wrapper .serve dd a,.contact .wrapper .focus dd a{
+    position: relative;
+    display: block;
+    margin-top: 35px;
+    margin-right:6px;
+    padding-top: 59px;
+
+    width: 93px;
+	height: 92px;
+	border: solid 1px #eeeeee;
+    font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #999999;
+    text-align: center;
+}
+
+.contact .wrapper .serve dd:nth-child(2) a::before{
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 32px;
+
+    width: 29px;
+	height: 28px;
+ 
+    background-image: url(../images/sprites.png); 
+    background-position: -250px -69px;
+}
+
+.contact .wrapper .serve dd:nth-child(2) a:hover::before{
+    background-position: -205px -69px;
+}
+
+.contact .wrapper .serve dd:nth-child(3) a::before{
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 32px;
+    width: 29px;
+	height: 28px;
+    background-image: url(../images/sprites.png); 
+    background-position: -350px -70px;
+}
+.contact .wrapper .serve dd:nth-child(3) a:hover::before{
+    background-position: -300px -70px;
+}
+
+.contact .wrapper .focus dd:nth-child(2) a::before{
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 32px;
+
+    width: 36px;
+	height: 29px;
+ 
+    background-image: url(../images/sprites.png); 
+    background-position: -250px -15px;
+}
+
+.contact .wrapper .focus dd:nth-child(2) a:hover::before{
+    background-position: -205px -15px;
+}
+
+.contact .wrapper .focus dd:nth-child(3) a::before{
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 32px;
+    width: 36px;
+	height: 29px;
+    background-image: url(../images/sprites.png); 
+    background-position: -350px -15px;
+}
+.contact .wrapper .focus dd:nth-child(3) a:hover::before{
+    background-position: -300px -15px;
+}
+
+
+.contact .wrapper .download{
+    margin: 70px 74px 0 0;
+    padding: 9px 35px 24px 0;
+    border-right: 2px solid #f2f2f2;
+}
+
+.contact .wrapper .download dd:nth-child(2){
+    margin-top: 24px;
+    margin-right: 22px;
+    border: 2px  solid #f4f4f4;
+    padding: 8px 8px 8px 8px;
+    width: 105px;
+	height: 103px;
+    background-image: url(../uploads/qrcode.png);
+    background-size: cover;
+}
+
+.contact .wrapper .download dd:nth-child(3) p{
+    margin-top: 30px;
+    font-family: PingFangSC-Regular;
+	font-size: 14px;
+    line-height: 1.5;
+	color: #999999;
+}
+.contact .wrapper .download dd:nth-child(3) button{
+    margin-top: 11px;
+    border: none;
+    width: 103px;
+	height: 32px;
+	background-color: #27ba9b;
+
+    font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #ffffff;
+    line-height: 32px;
+}
+
+.contact .wrapper .tel{
+    margin-top: 78px;
+}
+.contact .wrapper .tel dd span{
+    display: block;
+    margin-top: 58px;
+    font-family: PingFangSC-Semibold;
+	font-size: 22px;
+	color: #666666;
+}
+.contact .wrapper .tel dd p{
+    font-family: PingFangSC-Light;
+	font-size: 15px;
+	color: #999999;
+}
+
+
+.footer{
+    background-color: #333333;
+}
+.footer .wrapper{
+    width: 1393px;
+    height: 340px;
+}
+.footer .wrapper .merit{
+    height: 175px;
+    padding-left: 135px;
+    border-bottom: 3px solid #434343;
+}
+.footer .wrapper .merit li{
+    float: left;
+}
+.footer .wrapper .merit li a{
+    display: block;
+    margin-top: 60px;
+    position: relative;
+    margin-right: 300px;
+    padding-left: 77px;
+    height: 58px;
+    line-height: 58px;
+    font-family: PingFangSC-Light;
+	font-size: 28px;
+	color: #ffffff;
+}
+.footer .wrapper .merit li:last-child a{
+    margin-right: 0;
+}
+.footer .wrapper .merit li:first-child a::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    background-position: 0px 0px;
+}
+.footer .wrapper .merit li:nth-child(2) a::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    background-position: -130px 0px;
+}
+.footer .wrapper .merit li:nth-child(3) a::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    background-position: -65px 0px;
+}
+.footer .wrapper .copyright{
+    margin-top: 40px;
+    text-align: center;
+    font-family: PingFangSC-Light;
+	font-size: 14px;
+	color: #999999;
+}
+.footer .wrapper .copyright a{
+    font-family: PingFangSC-Light;
+	font-size: 14px;
+	color: #999999;
+}
+.footer .wrapper .copyright p{
+    margin-top: 19px;
+}
+

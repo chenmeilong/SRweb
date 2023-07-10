@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 存储数据 localStorage.setItem('键', '值')
+        // localStorage.setItem('uname', 'pink老师')
+        // localStorage.setItem('age', 18)
+        // 获取数据
+        // localStorage.getItem('键')
+        // console.log(localStorage.getItem('uname'))
+        // 删除数据
+        // localStorage.removeItem('uname')
+        // 1. 存储复杂数据类型（引用数据类型）
+        let obj = {
+            uname: '刘德华',
+            age: 17,
+            address: '黑马程序员'
+        }
+        console.log(JSON.stringify(obj))
+        //（1） 复杂数据类型一定要转换为json字符串在进行存储 （因为本地存储只能存储字符串）
+        localStorage.setItem('obj', JSON.stringify(obj))
+        // AJAX
+        // JSON 属性和值都是双引号进行包含
+        // let obj = {
+        //     "uname": "刘德华",
+        //     "age": "17",
+        //     "address": "黑马程序员"
+        // }
+        // （2） 取数据  可以使用 JSON.parse()  将json字符串转换为对象
+        // console.log(typeof localStorage.getItem('obj'))
+        console.log(JSON.parse(localStorage.getItem('obj')))
+
+        let object = {
+            age: 18
+        }
+
+        // 本地存储只能存储字符串 所以我要转换  转换为JSON格式的字符串
+        localStorage.setItem('key', JSON.stringify(object))
+        // 获取的过来的值是字符串，不是对象了没有办法直接使用，因此我们首先吧字符串转换为对象
+        // JSON.parse()
+        console.log(JSON.parse(localStorage.getItem('key')))
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15-查找方法</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+      ul {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>15-查找方法</h3>
+    <p>
+      jQuery 中封装了查找元素的方法，可以基于元素的结构关系查找新的元素
+    </p>
+    <!-- 测试用标签 -->
+    <div class="container">
+      <h4>课程列表</h4>
+      <ul class="course">
+        <li>html</li>
+        <li>css</li>
+        <li>javascript</li>
+      </ul>
+      <h4>校区列表</h4>
+      <ul class="campus">
+        <li class="bj">北京校区</li>
+        <li class="sh">上海校区</li>
+        <li class="gz">广州校区</li>
+        <li class="sz">深圳校区</li>
+      </ul>
+    </div>
+
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1. 父元素 parent
+      // $('.course')
+      //   .parent()
+      //   .css('backgroundColor', 'pink')
+
+      // 2. 子元素 children
+      $('.course')
+        .children()
+        .css('backgroundColor', 'skyblue')
+      $('.campus')
+        .children('.bj')
+        .css('backgroundColor', 'pink')
+
+      // 3.  兄弟元素 siblings
+      $('.sz')
+        .siblings()
+        .css('color', 'red')
+      $('.sz')
+        .siblings('.gz')
+        .css('backgroundColor', 'yellowgreen')
+
+      // 4. 后代元素 find
+      $('.container')
+        .find('h4')
+        .css('backgroundColor', 'yellowgreen')
+
+      $('.container')
+        .find('li')
+        .css('border', '10px solid orange')
+    </script>
+  </body>
+</html>

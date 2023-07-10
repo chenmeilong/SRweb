@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-滚动距离</title>
+    <style>
+      body {
+        height: 2000px;
+        padding-left: 20px;
+        width: 1500px;
+      }
+      p {
+        color: #333;
+      }
+      .box {
+        border: 1px solid #000;
+        height: 200px;
+        width: 400px;
+        overflow: scroll;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .inner {
+        width: 500px;
+        background-color: pink;
+      }
+      button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>滚动距离</h3>
+    <p>
+      jQuery对获取滚动距离进行了封装，使得在不同场景中获取和设置内容的滚动距离都十分的便捷
+    </p>
+
+    <div class="box">
+      <div class="inner">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum ipsa
+        voluptates delectus aliquam modi ad incidunt commodi, debitis fugiat
+        nobis vitae deserunt voluptate vero non iure eum officiis rem minima
+        reprehenderit aperiam quam, earum corrupti? Quis eius adipisci eligendi
+        aliquam odit veritatis placeat in officia dignissimos sequi modi maiores
+        neque voluptates sit vero nesciunt, veniam perspiciatis! Obcaecati
+        soluta, ullam quod dolores inventore deleniti illo? Hic cupiditate illo
+        odit ipsam expedita iste quos quisquam quibusdam. Omnis sed laudantium
+        numquam! Reprehenderit deleniti deserunt esse vel dolorem ducimus sed
+        assumenda nihil asperiores perferendis provident voluptates pariatur
+        alias eaque vero eius illo, aut odio obcaecati sint ab excepturi placeat
+        amet accusantium? Blanditiis aliquid facilis consectetur alias debitis,
+        laborum id expedita nostrum nulla nam esse magnam fugiat iusto ipsum in
+        voluptatem dolorum voluptatum cumque quia. Neque culpa dignissimos ea
+        sapiente hic doloremque, distinctio similique corrupti odio velit,
+        exercitationem nam illum, atque esse quam expedita harum amet totam
+        praesentium aliquam veritatis quaerat alias inventore iure! Culpa error
+        ab assumenda ut totam vitae accusantium ipsa sapiente voluptate, at
+        incidunt ipsum nam quibusdam earum odio esse veniam atque facilis,
+        excepturi quae delectus asperiores doloremque maxime? Nihil minus esse
+        eaque deserunt vel nisi quibusdam accusantium nostrum eum suscipit
+        tenetur placeat iste optio recusandae vero obcaecati sit, quo ad
+        officiis laborum. Impedit fugit, tenetur dicta assumenda hic inventore
+        delectus perspiciatis? Sit atque magni, sunt porro itaque quibusdam
+        veritatis accusamus! Quibusdam magnam velit obcaecati minima quasi!
+        Omnis ipsum debitis quas laudantium fugiat deleniti accusantium velit
+        doloremque. Numquam odio nam iusto animi fugit accusamus dolores,
+        nesciunt veniam saepe maiores ullam, blanditiis repellendus officiis
+        voluptate distinctio voluptates, perspiciatis rerum eveniet recusandae
+        dignissimos sapiente tempore amet id? Sequi voluptatem modi numquam
+        dignissimos totam a sunt nihil maiores quasi nobis debitis iste libero
+        minima recusandae suscipit aperiam quaerat quia cum labore facere
+        aliquid, cumque laboriosam tenetur dolorum! Eos modi ad omnis assumenda
+        cupiditate esse vitae nam, maxime asperiores dolorum quas molestias,
+        quibusdam illo tempora rerum expedita quia porro veniam soluta
+        consectetur facere accusamus eaque! Esse provident ratione a itaque,
+        facere possimus ullam praesentium enim quos voluptates fugiat, ipsam
+        nostrum quis laboriosam vitae quia vel ad cupiditate eveniet unde dolor
+        repellendus illo! Voluptatum quos excepturi deserunt nesciunt,
+        blanditiis natus nisi qui expedita est, earum, dolores non labore nihil
+        accusamus minima atque doloremque aspernatur rerum ut. Eum, provident
+        alias cupiditate exercitationem repudiandae atque voluptates consectetur
+        tempore harum ea eaque cum ratione fugit numquam ipsa error veniam
+        corporis labore dolorum? Et, perspiciatis. At similique repellat unde
+        minima doloremque omnis error, repellendus cum reiciendis eos saepe
+        consequatur illo nam consectetur, ipsam nobis velit, aperiam excepturi
+        ratione optio aliquid harum beatae a? Harum enim natus iure autem
+        officiis earum ex nemo porro aperiam. Libero ea totam aspernatur sed
+        doloribus facilis voluptatem, velit quam recusandae eum excepturi
+        consectetur quidem, nisi inventore tempore explicabo debitis dolorem
+        nihil culpa ex sunt? Alias sapiente officiis quas porro odio numquam
+        quod fuga sint laborum, ex in beatae iure consectetur ea. Nisi omnis
+        quos in nobis amet qui eveniet saepe aperiam ratione dolores, obcaecati
+        harum natus.
+      </div>
+    </div>
+    <button class="html-get">获取 页面 滚动距离</button>
+    <button class="html-set">设置 页面 滚动距离</button>
+    <button class="box-get">获取 box 滚动距离</button>
+    <button class="box-set">设置 box 滚动距离</button>
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1.获取 页面 滚动距离
+      $('.html-get').click(function () {
+        let top = $('html').scrollTop()
+        console.log('top:', top)
+        let left = $('html').scrollLeft()
+        console.log('left:', left)
+      })
+
+      // 2.设置 页面 滚动距离
+      $('.html-set').click(function () {
+        $('html').scrollTop(18)
+        $('html').scrollLeft(18)
+      })
+
+      // 3.获取 box 滚动距离
+      $('.box-get').click(function () {
+        let top = $('.box').scrollTop()
+        console.log('top:', top)
+        let left = $('.box').scrollLeft()
+        console.log('left:', left)
+      })
+
+      // 4.设置 box 滚动距离
+      $('.box-set').click(function () {
+        $('.box').scrollTop(66)
+        $('.box').scrollLeft(66)
+      })
+    </script>
+  </body>
+</html>

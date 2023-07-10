@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 
+		let str = '13264234373937363384628633124';
+		let obj = {
+		}
+		// console.log(obj[1]);
+
+		for (let i = 0; i< str.length; i++){
+			if (obj[str[i]]===undefined){
+				obj[str[i]]=1
+			}
+			else{
+				obj[str[i]]++
+			}
+		}
+		console.log(obj);
+
+	</script>
+</body>
+</html>

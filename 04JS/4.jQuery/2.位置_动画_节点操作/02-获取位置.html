@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-获取位置</title>
+    <style>
+      body {
+        padding: 20px 30px;
+        overflow: hidden;
+        margin: 10px;
+        position: relative;
+      }
+      p {
+        color: #333;
+      }
+      h3 {
+        margin: 0;
+      }
+      .outer {
+        width: 400px;
+        height: 210px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background-color: pink;
+        overflow: hidden;
+        /* position: relative;  */
+      }
+
+      .box {
+        width: 200px;
+        height: 120px;
+        background-color: red;
+        /* margin: 20px; */
+      }
+      button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>获取位置</h3>
+    <p>
+      由于 jQuery
+      对获取元素位置进行了封装，使得在不同场景中获取元素位置变的十分方便。
+    </p>
+    <div class="outer">
+      <div class="box"></div>
+    </div>
+    <button class="offset">测试offset方法</button>
+    <button class="position">测试position方法</button>
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+      // 测试offset方法
+      $('.offset').click(function () {
+        let offset = $('.box').offset()
+        console.log('offset:', offset)
+      })
+      // 测试position
+      $('.position').click(function () {
+        let position = $('.box').position()
+        console.log('position:', position)
+      })
+    </script>
+  </body>
+</html>

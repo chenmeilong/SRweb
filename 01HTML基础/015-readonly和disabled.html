@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>readonly disabled</title>
+  </head>
+  <body>
+    <!--
+			readonly和disabled相同点：都是只读不能修改。
+			但是readonly可以提交给服务器，disabled数据不会提交（即使有name属性也不会提交。）
+		-->
+    <form action="http://localhost:8080/taobao/save">
+      用户代码<input type="text" name="usercode" value="110" readonly />
+      <br />
+      用户姓名<input type="text" name="username" value="zhangsan" disabled />
+      <br />
+      <input type="submit" value="提交数据" />
+    </form>
+  </body>
+</html>

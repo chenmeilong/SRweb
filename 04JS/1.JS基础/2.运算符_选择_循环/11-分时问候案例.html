@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 用户输入时间 等我们学api 自动获取时间
+        let time = prompt('请输入小时：')
+        // 2. 多分支判断
+        if (time < 12) {
+            document.write(`上午好，好好工作`)
+        } else if (time < 18) {
+            document.write(`下午好，好好工作`)
+        } else if (time < 20) {
+            document.write(`晚上好，好好加班`)
+        } else {
+            document.write(`夜深了，头发还有吗？`)
+
+        }
+
+
+        // 12 - 18   下午
+        // 我们输入的时间 要大于12 并且小于 18 算下午
+        // time >12 && time < 18
+    </script>
+</body>
+
+</html>

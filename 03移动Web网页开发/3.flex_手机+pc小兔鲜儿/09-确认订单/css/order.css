@@ -1,0 +1,275 @@
+
+body{
+    background-color: #f7f7f8;
+}
+
+.panel{
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.main{
+    margin-top: 100px;
+    padding: 0 11px 80px 11px;
+    width: 100%;
+}
+.main .user-msg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+}
+ 
+.main .user-msg .map{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30px;
+	height: 30px;
+    border-radius: 50% 50%;
+	background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+}
+.main .user-msg .map a{
+    display: block;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: center;
+}
+.main .user-msg .user{
+    flex: 1;
+}
+.main .user-msg .user .name span:first-child{
+    display: inline-block;
+    width: 42px;
+    font-family: PingFangSC-Regular;
+	font-size: 15px;
+	color: #262626; 
+}
+.main .user-msg .user .name span:last-child{
+    font-family: PingFangSC-Regular;
+	font-size: 13px;
+	color: #333333;
+}
+.main .user-msg .user .adress{
+    margin-top: 10px;
+    font-family: PingFangSC-Regular;
+	font-size: 12px;
+	line-height: 18px;
+	color: #333333;
+    line-height: 1;
+}
+.main .user-msg .user .adress span{
+    margin-right: 4px;
+}
+
+
+.main .user-msg .more a{
+    display: block;
+    width: 44px;
+	height: 44px;
+    text-align: center;
+    line-height: 44px;
+}
+.main .user-msg .more a span{
+	color: #808080;
+}
+
+
+.main .goods{
+    margin-top: 9px;
+    padding: 0 11px 0;
+    height: 107px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.main .goods .pic{
+    margin-right: 12px;
+    width: 85px;
+    height: 85px;
+}
+.main .goods .info{
+    flex: 1;
+}
+.main .goods .info h5{
+    font-family: PingFangSC-Regular;
+	font-size: 13px;
+    font-weight: 400;
+	color: #262626; 
+}
+.main .goods .info p {
+    margin: 5px 0;
+    width: 95px;
+    
+    background-color: #f7f7f8;
+    height: 16px;
+	border-radius: 2px;
+    font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #888888;
+    line-height: 16px;
+
+}
+.main .goods .info p span:nth-child(1){
+    margin-right: 10px;
+}
+.main .goods .info .price span:first-child{
+    margin-right: 12px;
+	font-family: ArialMT;
+	font-size: 9px;
+	font-weight: bold;
+	line-height: 21px;
+	color: #cf4444;
+}
+.main .goods .info .price span:first-child i{
+    font-family: ArialMT;
+	font-size: 16px;
+	line-height: 21px;
+	color: #cf4444;
+}
+.main .goods .info .price span:last-child{
+    text-decoration:line-through;
+    font-family: ArialMT;
+	font-size: 12px;
+	color: #999999;
+}
+
+.main .goods .num{
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+}
+
+
+.main .msg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 6px;
+    padding: 10px 13px;
+    height: 125px;
+
+    font-family: PingFangSC-Regular;
+	font-size: 13px;
+	line-height: 21px;
+	color: #262626;
+}
+.main .msg div{
+    display: flex;
+}
+.main .msg div:nth-child(2n+1){
+    justify-content: space-between;
+}
+.main .msg .zhi i{
+    margin-left: 5px;
+    font-size: 8px;
+    color: #808080;
+}
+.main .msg .mai span{
+    margin-left: 19px;
+    font-family: PingFangSC-Regular;
+	font-size: 12px;
+	line-height: 21px;
+	color: #989898;
+}
+
+.main .all{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 6px;
+    padding: 10px 13px;
+    height: 125px;
+
+    font-family: PingFangSC-Regular;
+	font-size: 13px;
+	line-height: 21px;
+	color: #262626;
+}
+.main .all div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .all .zhi h5:last-child{
+    font-family: PingFangSC-Regular;
+	font-size: 13px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: #cf4444;
+}
+
+
+
+
+
+
+
+
+
+.pay{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #ededed;
+    padding: 0 11px 0px 9px;
+    height: 80px;
+    width: 100%;
+    background-color: #ffffff;
+}
+.pay .left span{
+    float: left;
+}
+.pay .left span:nth-child(1){
+    margin-top: 39px;
+    margin-right: 12px;
+    line-height: 1;
+	font-family: PingFangSC-Regular;
+	font-size: 11px;
+	color: #1e1e1e;
+}
+.pay .left span:nth-child(2){
+    margin-top: 40px;
+	font-family: PingFangSC-Regular;
+	font-size: 11px;
+    line-height: 1;
+	color: #cf4444;
+}
+.pay .left span:nth-child(3){
+    margin-top: 33px;
+	font-family: AccidentalPresidency;
+	font-size: 20px;
+    line-height: 1;
+	letter-spacing: 1px;
+	color: #cf4444;
+}
+.pay .left span:nth-child(4){
+    margin-top: 36px;
+    line-height: 1;
+	font-family: AccidentalPresidency;
+	font-size: 18px;
+	color: #cf4444;
+}
+.pay .right a{
+    display: block;
+    margin-top: 22px;
+    width: 91px;
+	height: 35px;
+    text-align: center;
+    line-height: 35px;
+	background-image: linear-gradient(90deg, 
+		#6fc2aa 5%, 
+		#54b196 100%);
+	border-radius: 3px;
+    font-family: MicrosoftYaHei;
+	font-size: 13px;
+	color: #ffffff;
+}

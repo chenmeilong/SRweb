@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+	<script type="text/javascript">
+		
+		// 一一对应
+		// let [a, b, c, d, e, f] = ['张飞', '赵云', '关羽', '张辽', '许褚', '典韦']
+		// console.log(a, b, c, d, e, f);
+
+		// 变量多值少
+		// let [a, b, c, d, e, f, g, h, i, j, k,l] = ['张飞', '赵云', '关羽', '张辽', '许褚', '典韦'];
+		// console.log( a, b, c, d, e, f, g, h, i, j, k, l );
+
+		// 变量少值多
+		// let [a, b, c] = ['张飞', '赵云', '关羽', '张辽', '许褚', '典韦'];
+		// console.log( a, b, c );
+		
+		// 按需取值
+		// let [, , a, b, , c] = ['张飞', '赵云', '关羽', '张辽', '许褚', '典韦']
+		// console.log( a, b, c );
+		
+		// 剩余值
+		// let [, a, b, ...c] = ['张飞', '赵云', '关羽', '张辽', '许褚', '典韦'];
+		// console.log(a, b, c);
+		
+		// 复杂情况
+		let [, , a, b, [, c, d]] = ['张飞', '赵云', '关羽', '张辽', ['林冲', '鲁智深', '武松', '宋老板']]
+		console.log( a, b, c, d );
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13-人员管理</title>
+    <link rel="stylesheet" href="./datepicker/datepicker.css" />
+    <!-- 自己的样式 -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <h1>人员管理</h1>
+    <div class="container">
+      <!-- 新增按钮 -->
+      <button class="btn add">新增</button>
+      <!-- 表格 -->
+      <table>
+        <thead>
+          <tr>
+            <th width="150">姓名</th>
+            <th width="150">手机</th>
+            <th>生日</th>
+            <th width="300">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="display: none;">
+            <td class="td-name">小红</td>
+            <td class="td-mobile">18888881111</td>
+            <td class="td-birth">1990年02月08日</td>
+            <td>
+              <button class="btn edit">编辑</button>
+              <button class="btn del">删除</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="td-name">小红</td>
+            <td class="td-mobile">18888881111</td>
+            <td class="td-birth">1990年02月08日</td>
+            <td>
+              <button class="btn edit">编辑</button>
+              <button class="btn del">删除</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- 弹出框 -->
+    <div class="dialog-wrap">
+      <div class="form-container">
+        <div class="title">
+          <h3>新增</h3>
+          <i class="close">×</i>
+        </div>
+        <form class="form">
+          <label class="required">
+            姓名:
+            <input
+              data-required
+              data-describedby="nickname-error"
+              data-description="nickname"
+              type="text"
+              class="nickname"
+            />
+            <span class="error" id="nickname-error"></span>
+          </label>
+          <label class="required">
+            手机:
+            <input
+              data-required
+              data-pattern="^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$"
+              data-describedby="mobile-error"
+              data-description="mobile"
+              type="text"
+              class="mobile"
+            />
+            <span class="error" id="mobile-error"></span>
+          </label>
+          <label class="required">
+            生日:
+            <input
+              data-required
+              data-describedby="birthday-error"
+              data-description="birthday"
+              type="text"
+              class="birthday"
+            />
+            <span class="error" id="birthday-error"></span>
+          </label>
+
+          <div class="control">
+            <a class="btn cancel">取消</a>
+            <button class="btn">提交</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <!-- 导入日期选择器插件 -->
+    <script src="./datepicker/datepicker.js"></script>
+    <!-- 导入日期选择器的语言包 -->
+    <script src="./datepicker/i18n/datepicker.zh-CN.js"></script>
+    <!-- 导入表单校验插件 -->
+    <script src="./jquery-validate/jquery-validate.js"></script>
+    <!-- 导入自己的js -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

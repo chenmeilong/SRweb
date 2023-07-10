@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16-工具方法</title>
+    <style>
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>16-工具方法</h3>
+    <p>
+      jQuery 除了封装了大量的 DOM 操作外，还提供了一些工具方法，这些方法通过 $
+      或 jQuery 直接调用
+    </p>
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      let arr = ['北京', '上海', '广州', '深圳']
+
+      // 1. $.each方法 类似于forEach方法
+      $.each(arr, function (index, value) {
+        console.log('index:', index)
+        console.log('value:', value)
+      })
+
+      // 2. $.map方法 类似于 map方法
+      let arr2 = $.map(arr, function (value) {
+        console.log('value:', value)
+        return value + '校区'
+      })
+      console.log('arr2:', arr2)
+    </script>
+  </body>
+</html>

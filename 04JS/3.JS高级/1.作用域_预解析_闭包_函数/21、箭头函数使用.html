@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="button" value="点击">
+
+
+	<script type="text/javascript">
+
+
+		// 获取元素
+		// let btn = document.querySelector('input');
+
+		// 监听事件  如果用this会出错的
+		// btn.addEventListener('click', () => {
+		// 	btn.style.background = 'red'
+		// });
+
+		
+		// 箭头函数使用
+		// window.setInterval(function () {console.log('定时器');}, 1000);
+		// window.setInterval(() => {
+		// 	console.log('函数体');
+		// }, 1000)
+
+		// 注意点： 
+		
+		// 1、箭头不存在预解析，所以必须先定义再调用
+		// let fn = () => {
+		// 	console.log('aaa');
+		// }
+		// fn();
+
+
+		// 2、箭头函数中，不存在arguments
+		// let fn = (...a) => {
+		// 	console.log(a);
+		// };
+		// fn(1, 2, 3);
+
+		// 3、箭头函数认为不存在this，箭头函数中的this指向的是上级作用域的this
+		// 箭头函数中的this指向箭头函数所在作用域的this
+		// 如果涉及到this使用的时候，劲量不要使用箭头函数 
+
+		let obj = {
+			fei : function () {
+				console.log(this);
+				window.setInterval( () => {
+					console.log(this)
+				}, 1000 );
+			}
+		}
+		obj.fei();
+
+		// window.setInterval(function () {
+		// 	console.log(this);
+		// }, 1000)
+
+
+		
+		// function fn () {
+		// 	console.log(this)
+		// }
+		// window.fn();
+
+		// let obj = {
+		// 	uname : '张三丰',
+		// 	age : 22,
+		// 	taiji :function () {
+		// 		console.log(this);
+		// 	}
+		// }
+		// obj.taiji();
+
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+.box {
+  width: 300px;
+}
+.navbar-brand {
+  display: block;
+  margin-top: 10px;
+  width: 200px;
+  height: 40px;
+  background-image: url(../images/logo.png);
+}
+.navbar-default {
+  background-color: transparent;
+  border: none;
+}
+.carousel img {
+  height: 100% !important;
+}
+@media (max-width: 992px) {
+  .carousel .item {
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel .item {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .carousel .item {
+    height: 500px;
+  }
+}
+.project {
+  margin-top: 50px;
+  text-align: center;
+}
+.project .container div a {
+  display: block;
+  height: 200px;
+  background-color: aqua;
+}

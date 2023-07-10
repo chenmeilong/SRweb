@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            overflow: auto;
+            padding: 10px;
+            border: 10px solid red;
+            margin: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+        我有很多很多的内容哦
+    </div>
+    <script>
+        // scrollWidth scrollHeight  内容 宽高 （了解）
+        let div = document.querySelector('div')
+        console.log(div.scrollWidth)  // 150 不带单位
+        console.log(div.scrollHeight)  // 336 不带单位
+        console.log('----------------------------')
+        // offset 盒子元素的大小 = 盒子本身的宽度和高度 + padding + border
+        console.log(div.offsetWidth)  // 150 不带单位
+        console.log(div.offsetHeight)  // 150 不带单位
+        console.log(div.offsetTop)  //
+        console.log(div.offsetLeft)
+        //  client 当前可视区域  不包含滚动条  边框等等
+        console.log('----------------------------')
+        console.log(div.clientWidth)
+        console.log(div.clientHeight)
+        console.log(div.clientTop)  // 边框的宽度  了解  呵呵
+        console.log(div.clientLeft)
+        // 2. 被卷去的头部和左侧
+        div.addEventListener('scroll', function () {  
+            console.log(document.querySelector('div').offsetTop)
+            console.log(document.querySelector('div').offsetTop)  //scrollLeft
+            // document.querySelector('div').scrollTop=30   //只有这个可写
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14-获取尺寸</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .outer {
+        width: 400px;
+        height: 210px;
+        margin-top: 15px;
+        background-color: pink;
+        overflow: hidden;
+      }
+
+      .box {
+        width: 200px;
+        height: 120px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        border: 10px dashed black;
+        margin-left: 20px;
+        margin-top: 10px;
+        background-color: yellowgreen;
+      }
+
+      hr {
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>元素大小</h3>
+    <p>
+      由于 jQuery 对获取元素大小进行了封装，使得获取元素不同形式的大小十分方便。
+    </p>
+
+    <div class="outer">
+      <div class="box"></div>
+    </div>
+
+    <hr />
+
+    <button class="content">内容大小</button>
+    <button class="padding">包含内边距大小</button>
+    <button class="border">包含边框大小</button>
+    <button class="margin">包含外边距大小</button>
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+      // 1.获取元素内容区域大小
+      $('.content').click(function () {
+        let width = $('.box').width()
+        let height = $('.box').height()
+        console.log('width:', width)
+        console.log('height:', height)
+      })
+
+      // 2.获取元素内容区域 + 内边距大小
+      $('.padding').click(function () {
+        let width = $('.box').innerWidth()
+        let height = $('.box').innerHeight()
+        console.log('width:', width)
+        console.log('height:', height)
+      })
+
+      // 3.获取元素内容区域 + 内边距 + 边框大小
+      $('.border').click(function () {
+        let width = $('.box').outerWidth()
+        let height = $('.box').outerHeight()
+        console.log('width:', width)
+        console.log('height:', height)
+      })
+
+      // 4.获取元素内容区域 + 内边距 + 边框 + 外边距大小
+      $('.margin').click(function () {
+        let width = $('.box').outerWidth(true)
+        let height = $('.box').outerHeight(true)
+        console.log('width:', width)
+        console.log('height:', height)
+      })
+    </script>
+  </body>
+</html>

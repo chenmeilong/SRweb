@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-入口函数</title>
+    <style>
+      p {
+        color: #333;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+      }
+    </style>
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 0. 直接修改背景色(错误演示)
+      // $('.box').css('backgroundColor', 'orange')
+
+      // 1. onload原始写法
+      // window.onload = function () {
+      //   $('.box').css('backgroundColor', 'orange')
+      // }
+
+      // 2. onload结合jQ
+      // $(window).on('load', function () {
+      //   $('.box').css('backgroundColor', 'skyblue')
+      // })
+
+      // 3. ready完整写法
+      // $(document).ready(function () {
+      //   $('.box').css('backgroundColor', 'pink')
+      // })
+
+      // 4. ready简化写法
+      // $(function () {
+      //   $('.box').css('backgroundColor', 'deepskyblue')
+      // })
+
+      // 5. onload 和 ready的执行先后
+      $(window).on('load', function () {
+        console.log('load')
+      })
+      $(function () {
+        console.log('ready')
+      })
+    </script>
+  </head>
+  <body>
+    <h3>02-入口函数</h3>
+    <p>jQuery提供了类似于window.onload的方法，可以在dom加载完毕时执行</p>
+    <!-- 测试元素 -->
+    <div class="box"></div>
+  </body>
+</html>

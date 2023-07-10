@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function fn(x, y) {
+        //     x = x || 0
+        //     y = y || 0
+        //     console.log(x + y)
+        // }
+        // fn(1, 2)
+        // fn()
+        // x 和 y 可以看做是 函数内部的局部变量
+        // 调用的时候会有个内部判断是否有参数传递过来
+        // 没有参数 则 执行 x = 0
+        // 有参数，则执行 实参赋值
+        function fn(x = 0, y = 0) {
+            console.log(x + y)
+        }
+        fn()
+        fn(3, 5)
+    </script>
+</body>
+
+</html>

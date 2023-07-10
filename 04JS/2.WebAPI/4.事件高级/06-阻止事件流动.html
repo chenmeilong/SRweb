@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            margin: 100px auto;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .son {
+
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        let fa = document.querySelector('.father')
+        let son = document.querySelector('.son')
+        fa.addEventListener('click', function (e) {
+            alert('我是爸爸')
+            e.stopPropagation()
+        })
+        son.addEventListener('click', function (e) {
+            alert('我是儿子')
+            // 阻止流动 Propagation 传播
+            e.stopPropagation()
+        })
+        document.addEventListener('click', function () {
+            alert('我是爷爷')
+        })
+
+        // btn.onclick = function() {}
+    </script>
+</body>
+
+</html>

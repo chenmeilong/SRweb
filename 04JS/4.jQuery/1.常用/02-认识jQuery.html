@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>02-认识jQuery</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>02-认识jQuery</h2>
+    <p>
+      jQuery 是一个专注于 DOM 操作的类库，通过一系列的封装，不仅简化了 DOM
+      操作，还处理了不同浏览器之间的兼容，极大的提升了编码的效率，其口号是 Write
+      Less Do More!
+    </p>
+    <ul>
+      <li>西兰花</li>
+      <li>西红柿</li>
+      <li>西瓜</li>
+      <li>西葫芦</li>
+    </ul>
+    <!-- 引入 jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 需求:为所有的li绑定 点击事件 , 点击时修改背景色为 粉色
+      // 1. DOM语法
+      // let liArr = document.querySelectorAll('li')
+      // for (let i = 0; i < liArr.length; i++) {
+      //   liArr[i].onclick = function () {
+      //     this.style.backgroundColor = 'pink'
+      //   }
+      // }
+
+      // 2. jQuery语法
+      $('li').click(function () {
+        $(this).css('backgroundColor', 'pink')
+      })
+    </script>
+  </body>
+</html>

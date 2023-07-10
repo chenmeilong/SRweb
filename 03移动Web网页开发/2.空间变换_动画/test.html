@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        html{
+            height: 100%;
+        }
+        body{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background: url(./images/f1_1.jpg) no-repeat center 0;
+            background-size: cover;
+        }
+
+        .cloud img{
+            position: absolute;
+            
+        }
+        .cloud img:first-child{
+            top: 20px;
+            left: 800px;
+            animation: cloud 1s infinite alternate ;
+        }
+        .cloud img:nth-child(2){
+            top: 80px;
+            right: 400px;
+            animation: cloud 1s infinite alternate 0.2s;
+        }
+        .cloud img:nth-child(3){
+            top: 220px;
+            left: 400px;
+            animation: cloud 1s infinite alternate 0.4s;
+        }
+
+        @keyframes cloud{
+            to{
+                transform: translateX(20px);
+            }
+        }
+
+        .center img{
+            position: absolute;
+        }
+        .center img:nth-child(1){
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation: center 1s infinite alternate;
+        }
+        .center img:nth-child(2){
+            top: 25%;
+            left: 63%;
+            transform: translate(-50%,-50%);
+            animation: center 1s infinite alternate .2s;
+        }
+        .center img:nth-child(3){
+            top: 25%;
+            left: 33%;
+            transform: translate(-50%,-50%);
+            animation: center 1s infinite alternate .4s;
+        }
+        @keyframes center{
+            to{
+                transform: translate(-50%,-50%) scale(.8);
+            }
+        }
+        .float img{
+            width: 80px;
+            position: absolute;
+        }
+        .float img:nth-child(1){
+            bottom: 10px;
+            left: 25%;
+            transform: translate(-50%,-50%);
+            animation: float 1s infinite alternate;
+        }
+        .float img:nth-child(2){
+            bottom: 10px;
+            left: 42%;
+            transform: translate(-50%,-50%);
+            animation: float 1s infinite alternate .2s;
+        }
+        .float img:nth-child(3){
+            bottom: 10px;
+            left: 58%;
+            transform: translate(-50%,-50%);
+            animation: float 1s infinite alternate .4s;
+        }
+        .float img:nth-child(4){
+            bottom: 10px;
+            left: 74%;
+            transform: translate(-50%,-50%);
+            animation: float 1s infinite alternate .6s;
+        }
+        @keyframes float{
+            to{
+                transform: translate(-50%,-80%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cloud">
+        <img src="./images/yun1.png" alt="">
+        <img src="./images/yun2.png" alt="">
+        <img src="./images/yun3.png" alt="">
+    </div>
+    <div class="center">
+        <img src="./images/font1.png" alt="">
+        <img src="./images/lu.png" alt="">
+        <img src="./images/san.png" alt="">
+    </div>
+    <div class="float">
+        <img src="./images/float1.png" alt="">
+        <img src="./images/float2.png" alt="">
+        <img src="./images/float3.png" alt="">
+        <img src="./images/float4.png" alt="">
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+
+
+	<script type="text/javascript">
+		// 任何一个作用域在执行之前都要先预解析
+		// 内存：
+		// function fn () {
+		// 	console.log('函数123');
+		// }
+		
+		// 预解析：
+		// 函数提升：
+		
+		// 函数：
+			// 会把代码中具有名字的函数提前解析，解析到当前作用域最前面
+			// 但是，只定义，不调用
+			// 函数优先
+
+		fn();
+
+		function fn () {
+			console.log('函数123'); 
+		}
+
+		var fn1 = function fun() {}
+	</script>
+
+
+</body>
+</html>

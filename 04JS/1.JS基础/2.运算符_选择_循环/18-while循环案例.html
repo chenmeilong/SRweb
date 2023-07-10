@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 输出 1~100个数字
+        // 起始值
+        // let i = 1
+        // // 终止条件
+        // while (i <= 100) {
+        //     document.write(` <p>是:${i} </p>`)
+        //     // 变量变化
+        //     i++
+        // }
+
+        // 2. 计算1~100 的累加和  1+2+3+.. + 100
+        // let j = 1
+        // let sum = 0
+        // while (j <= 100) {
+        //     // sum = sum + j
+        //     sum += j
+        //     j++
+        // }
+        // console.log(sum)  // 5050
+
+        // 3. 求 1~100 之间的偶数累加和
+        let i = 1
+        let sum = 0
+        while (i <= 100) {
+            if (i % 2 === 0) {
+                // 此时 i 一定是偶数
+                sum = sum + i
+            }
+            // 不管你是偶数还是奇数我都要++
+            i++
+        }
+        console.log(sum)
+
+
+
+    </script>
+</body>
+
+</html>

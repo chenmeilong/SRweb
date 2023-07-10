@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	
+	<script type="text/javascript">
+
+		document.addEventListener('click', function () {
+			window.setInterval(() => {
+				console.log(this);           //document
+			}, 1000)
+		});
+
+		// 事件处理函数
+		document.addEventListener('click', () => {
+			console.log(this);              //window
+		});
+
+		// 构造函数：箭头函数不能当做构造函数的使用
+		let Person = (uname, age) => {
+			this.uname = uname;
+			this.age = age;
+		}
+		// new Person();
+
+	</script>
+
+	
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义动画</title>
+    <style>
+        body {
+          padding: 0 30px;
+          height: 2000px;
+          width: 2000px;
+        }
+        p {
+            color: #333;
+        }
+        .contaniner{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            position: relative;
+        }
+      </style>
+</head>
+<body>
+    <h3>自定义</h3>
+    <p>
+      animate方法来实现自定义动画效果
+    </p>
+    <div class="contaniner">
+        <div class="box"></div>
+    </div>
+    <button class="custom">自定义动画</button>
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+        $('.custom').click(function(){
+            $('.box').animate({
+                width: 150,
+                height: 150,
+                marginLeft: 100,
+                top:100,
+                // backgroundColor: 'orange',   //颜色不可以累加所以不生效
+            },2000)
+
+            $('html').animate({
+                scrollLeft: 200,
+                scrollLeftTop:200,
+            })
+        })
+    </script>
+</body>
+</html>

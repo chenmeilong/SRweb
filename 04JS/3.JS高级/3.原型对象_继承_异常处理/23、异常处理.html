@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    //   throw new Error("这是抛出的错误信息");
+		function foo() {
+		try {
+			// 查找 DOM 节点
+			var p = docunent.querySelector('p');
+
+		} catch(error) {
+			console.log(error.message);  //try 代码段中执行有错误时，会执行 catch 代码段
+			return;  // 终止代码继续执行
+		}
+		p.style.color = 'red';  		// 改变文本样式
+		}
+		foo();
+    </script>
+  </body>
+</html>

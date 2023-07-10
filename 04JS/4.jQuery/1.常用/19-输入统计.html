@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>练习 - 新浪微博</title>
+    <link rel="stylesheet" href="./css/weibo.css" />
+  </head>
+  <body>
+    <div class="fixedbar">
+      <div class="header">
+        <!-- logo -->
+        <a class="logo" href="javascript:;">新浪微博</a>
+        <!-- 搜索框 -->
+        <div class="search-box">
+          <input type="text" placeholder="大家正在搜：吴启华道歉" />
+          <a href="javascript:;" class="W_ficon ficon_search S_ficon">f</a>
+        </div>
+        <!-- 导航栏 -->
+        <div class="navs">
+          <ul>
+            <li>
+              <a class="active" href="javascript:;">
+                <em class="W_ficon ficon_home S_ficon">E</em>
+                首页
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_wb_vb S_ficon"></em>
+                视频
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_found S_ficon">F</em>
+                发现
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_game S_ficon">G</em>
+                游戏
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_user S_ficon">H</em>
+                哞哞牛娃
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_mail S_ficon">I</em>
+              </a>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_set S_ficon">*</em>
+              </a>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_send S_ficon">ß</em>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main clearfix">
+      <!-- 侧边栏 -->
+      <div class="aside">
+        <ul>
+          <li>
+            <a href="javascript:;">首页</a>
+          </li>
+          <li>
+            <a href="javascript:;">我的收藏</a>
+          </li>
+          <li>
+            <a href="javascript:;">我的赞</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_hot S_ficon">ì</em>
+              热门微博
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_wb_vb S_ficon"></em>
+              热门视频
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_timesort S_ficon">z</em>
+              最新微博
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_friends S_ficon">C</em>
+              好友圈
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_p_interest S_ficon">æ</em>
+              特别关注
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_vplus S_ficon"></em>
+              专属微博
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_dot S_ficon">D</em>
+              媒体
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_groupwb S_ficon">º</em>
+              群微博
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <em class="W_ficon ficon_p_quietfollow S_ficon">â</em>
+              悄悄关注
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- 小部件 -->
+      <div class="widgets">
+        <!-- 用户资料 -->
+        <div class="profile">
+          <div class="avatar">
+            <img src="./uploads/avatar.jpg" alt="" />
+          </div>
+          <div class="extra">
+            <h5>哞哞牛娃</h5>
+            <ul>
+              <li>
+                <a href="javascript:;"> 129<span>关注</span> </a>
+              </li>
+              <li>
+                <a href="javascript:;"> 70<span>粉丝</span> </a>
+              </li>
+              <li>
+                <a href="javascript:;"> 2<span>微博</span> </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 好书推荐 -->
+        <div class="panel">
+          <div class="title">
+            <h5 style="color: #eb7350;">亚洲好书榜实时趋势</h5>
+            <a class="refresh" href="javascript:;">
+              <em class="W_ficon ficon_rotate S_ficon">e</em>
+              换一换
+            </a>
+          </div>
+          <div class="books">
+            <ul>
+              <li class="active">
+                <div class="pic">
+                  <img src="./uploads/book_1.jpg" alt="" />
+                </div>
+                <div class="meta">
+                  <h6><i>1</i>巷里林泉</h6>
+                  <span class="author">狄戈</span>
+                  <span class="rank">8243分</span>
+                </div>
+              </li>
+              <li>
+                <div class="pic">
+                  <img src="./uploads/book_2.jpg" alt="" />
+                </div>
+                <div class="meta">
+                  <h6><i>2</i>日月如移越少年</h6>
+                  <span class="author">狄戈</span>
+                  <span class="rank">8243分</span>
+                </div>
+              </li>
+              <li>
+                <div class="pic">
+                  <img src="./uploads/book_3.jpg" alt="" />
+                </div>
+                <div class="meta">
+                  <h6><i>3</i>长弓少年行</h6>
+                  <span class="author">狄戈</span>
+                  <span class="rank">8243分</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a class="more" href="javascript:;">查看更多</a>
+        </div>
+        <!-- 热门话题 -->
+        <div class="panel">
+          <div class="title">
+            <h5>热门话题</h5>
+            <a class="refresh" href="javascript:;">
+              <em class="W_ficon ficon_rotate S_ficon">e</em>
+              换一换
+            </a>
+          </div>
+          <div class="hots">
+            <ul>
+              <li>
+                <a href="javascript:;"> #孟晚舟未能获释#</a>
+                <span>5亿</span>
+              </li>
+              <li>
+                <a href="javascript:;"> #传闻中的陈芊芊# </a>
+                <span>34亿</span>
+              </li>
+              <li>
+                <a href="javascript:;"> #两会# </a>
+                <span>114亿</span>
+              </li>
+              <li>
+                <a href="javascript:;">#今年不将占道经营等列...#</a>
+                <span>1513万</span>
+              </li>
+              <li>
+                <a href="javascript:;">#比剧情更出圈的台词#</a>
+                <span>2亿</span>
+              </li>
+              <li>
+                <a href="javascript:;">#天空之镜涉嫌虚假宣传...#</a>
+                <span>1亿</span>
+              </li>
+              <li>
+                <a href="javascript:;">#2020珠峰高程测量#</a>
+                <span>2亿</span>
+              </li>
+              <li>
+                <a href="javascript:;">#乱港分子的言论有多荒...#</a>
+                <span>1478万</span>
+              </li>
+              <li>
+                <a href="javascript:;">#何鸿燊去世#</a>
+                <span>23亿</span>
+              </li>
+              <li>
+                <a href="javascript:;">#伊能静儿子女装#</a>
+                <span>5亿</span>
+              </li>
+            </ul>
+          </div>
+          <a class="more" href="javascript:;">查看更多</a>
+        </div>
+      </div>
+      <div class="content">
+        <!-- 发布微博 -->
+        <div class="publish">
+          <div class="meta">
+            <p class="W_swficon ficon_swtxt">
+              <em class="spac1">有什么新</em>
+              <em class="spac2">鲜</em>
+              <em class="spac3">事想告诉大家</em>
+              <em class="spac4">?</em>
+            </p>
+            <!-- 字数统计区域 -->
+            <p class="words">已输入<span>5</span>字</p>
+          </div>
+          <!-- 输入区域 -->
+          <div class="input-box">
+            <textarea></textarea>
+          </div>
+          <div class="action">
+            <div class="kind">
+              <a href="javascript:;">
+                <em class="W_ficon ficon_face">o</em>
+                表情
+              </a>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_image">p</em>
+                图片
+              </a>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_video">q</em>
+                视频
+              </a>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_swtopic">"</em>
+                话题
+              </a>
+              <a href="javascript:;">
+                <em class="W_ficon ficon_artical"></em>
+                头条文章
+              </a>
+              <a href="javascript:;">・・・</a>
+              <!-- 发布按钮  -->
+              <a href="javascript:;" class="publish_btn">发布</a>
+            </div>
+          </div>
+        </div>
+        <!-- 信息流 -->
+        <div class="feeds">
+          <div class="filters">
+            <a href="javascript:;">全部</a>
+            <a href="javascript:;">原创</a>
+            <a href="javascript:;">图片</a>
+            <a href="javascript:;">视频</a>
+            <a href="javascript:;">音乐</a>
+            <a href="javascript:;">文章</a>
+          </div>
+          <div class="section">
+            <div class="feed">
+              <div class="meta">
+                <div class="avatar">
+                  <img src="./uploads/avatar.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <h6>哞哞牛娃</h6>
+                  <p>24分钟前来自 微博 weibo.com</p>
+                </div>
+              </div>
+              <div class="blog">
+                <p>不写代码不开心...</p>
+              </div>
+              <div class="extra">
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_favorite S_ficon">û</em>
+                  收藏
+                </a>
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_forward S_ficon"></em>
+                  转发
+                </a>
+                <a class="publish_button" href="javascript:;">
+                  <em class="W_ficon ficon_repeat S_ficon"></em>
+                  24
+                </a>
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_praised S_txt2">ñ</em>
+                  28
+                </a>
+              </div>
+
+              <!-- 评论区 -->
+              <div class="comment">
+                <div class="comment_wrap">
+                  <div class="comment_author">
+                    <img src="./uploads/avatar.jpg" alt="" />
+                  </div>
+                  <div class="comment_form">
+                    <div class="input-box">
+                      <input type="text" />
+                    </div>
+                    <a class="comment_button" href="javascript:;">评论</a>
+                  </div>
+                </div>
+                <div class="comment_list">
+                  <div class="item">
+                    <div class="comment_author">
+                      <img src="./uploads/avatar.jpg" alt="" />
+                    </div>
+                    <div class="comment_content">
+                      <p class="text">
+                        <a href="javascript:;">哞哞牛娃:</a>
+                        <span>那就起来写吧</span>
+                      </p>
+                      <span class="datetime">20分钟前</span>
+                    </div>
+                    <div class="comment_action">
+                      <a class="delete_button" href="javascript:;">删除</a>
+                      <a href="javascript:;">回复</a>
+                      <a href="javascript:;">赞</a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="comment_author">
+                      <img src="./uploads/avatar.jpg" alt="" />
+                    </div>
+                    <div class="comment_content">
+                      <p class="text">
+                        <a href="javascript:;">哞哞牛娃:</a>
+                        <span>那就起来写吧</span>
+                      </p>
+                      <span class="datetime">20分钟前</span>
+                    </div>
+                    <div class="comment_action">
+                      <a class="delete_button" href="javascript:;">删除</a>
+                      <a href="javascript:;">回复</a>
+                      <a href="javascript:;">赞</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feed">
+              <div class="meta">
+                <div class="avatar">
+                  <img src="./uploads/avatar_3.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <h6>凤凰网视频</h6>
+                  <p>24分钟前来自 微博 weibo.com</p>
+                </div>
+              </div>
+              <div class="blog">
+                <p>
+                  将近4个月以来，我们经历了前所未有的长时间的口罩生活。口罩隔绝了病毒，却也给了我们千人一面的“口罩脸”。为了打破社交隔阂和冷漠，践行社会责任，一汽马自达@一汽马自达
+                  联合凤凰网发起#拥抱美好
+                  520微笑接力#活动，将你的微笑画在口罩上，找到人与人之间爱的传达的最简单方式，“口罩脸”也能表达心情，也让我们继续传递微笑与爱，给予TA最温暖的力量！
+                </p>
+                <img src="./uploads/feed_img.jpg" alt="" />
+              </div>
+              <div class="extra">
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_favorite S_ficon">û</em>
+                  收藏
+                </a>
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_forward S_ficon"></em>
+                  转发
+                </a>
+                <a class="publish_button" href="javascript:;">
+                  <em class="W_ficon ficon_repeat S_ficon"></em>
+                  24
+                </a>
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_praised S_txt2">ñ</em>
+                  28
+                </a>
+              </div>
+
+              <!-- 评论区 -->
+              <div class="comment">
+                <div class="comment_wrap">
+                  <div class="comment_author">
+                    <img src="./uploads/avatar.jpg" alt="" />
+                  </div>
+                  <div class="comment_form">
+                    <div class="input-box">
+                      <input type="text" />
+                    </div>
+                    <a class="comment_button" href="javascript:;">评论</a>
+                  </div>
+                </div>
+                <div class="comment_list">
+                  <div class="item">
+                    <div class="comment_author">
+                      <img src="./uploads/avatar.jpg" alt="" />
+                    </div>
+                    <div class="comment_content">
+                      <p class="text">
+                        <a href="javascript:;">哞哞牛娃:</a>
+                        <span>那就起来写吧</span>
+                      </p>
+                      <span class="datetime">20分钟前</span>
+                    </div>
+                    <div class="comment_action">
+                      <a class="delete_button" href="javascript:;">删除</a>
+                      <a href="javascript:;">回复</a>
+                      <a href="javascript:;">赞</a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="comment_author">
+                      <img src="./uploads/avatar.jpg" alt="" />
+                    </div>
+                    <div class="comment_content">
+                      <p class="text">
+                        <a href="javascript:;">哞哞牛娃:</a>
+                        <span>那就起来写吧</span>
+                      </p>
+                      <span class="datetime">20分钟前</span>
+                    </div>
+                    <div class="comment_action">
+                      <a class="delete_button" href="javascript:;">删除</a>
+                      <a href="javascript:;">回复</a>
+                      <a href="javascript:;">赞</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feed">
+              <div class="meta">
+                <div class="avatar">
+                  <img src="./uploads/avatar_2.jpg" alt="" />
+                </div>
+                <div class="info">
+                  <h6>SUUNTO颂拓</h6>
+                  <p>推荐来自 微博 weibo.com</p>
+                </div>
+              </div>
+              <div class="blog">
+                <p>
+                  7待已久，SUUNTO颂拓天猫旗舰店618预售正式开启！品牌代言人魏大勋定制礼盒限量上线，签名明信片好礼宠粉到底；Suunto
+                  7预售首降，尾款限时享定金全免，再享全场12期免息。拔草心仪手表、不再左右为难！带走你的能者装备、立即下定
+                </p>
+                <img src="./uploads/feed_img_2.jpg" alt="" />
+              </div>
+              <div class="extra">
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_favorite S_ficon">û</em>
+                  收藏
+                </a>
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_forward S_ficon"></em>
+                  转发
+                </a>
+                <a class="publish_button" href="javascript:;">
+                  <em class="W_ficon ficon_repeat S_ficon"></em>
+                  24
+                </a>
+                <a href="javascript:;">
+                  <em class="W_ficon ficon_praised S_txt2">ñ</em>
+                  28
+                </a>
+              </div>
+
+              <!-- 评论区 -->
+              <div class="comment">
+                <div class="comment_wrap">
+                  <div class="comment_author">
+                    <img src="./uploads/avatar.jpg" alt="" />
+                  </div>
+                  <div class="comment_form">
+                    <div class="input-box">
+                      <input type="text" />
+                    </div>
+                    <a class="comment_button" href="javascript:;">评论</a>
+                  </div>
+                </div>
+                <div class="comment_list">
+                  <div class="item">
+                    <div class="comment_author">
+                      <img src="./uploads/avatar.jpg" alt="" />
+                    </div>
+                    <div class="comment_content">
+                      <p class="text">
+                        <a href="javascript:;">哞哞牛娃:</a>
+                        <span>那就起来写吧</span>
+                      </p>
+                      <span class="datetime">20分钟前</span>
+                    </div>
+                    <div class="comment_action">
+                      <a class="delete_button" href="javascript:;">删除</a>
+                      <a href="javascript:;">回复</a>
+                      <a href="javascript:;">赞</a>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="comment_author">
+                      <img src="./uploads/avatar.jpg" alt="" />
+                    </div>
+                    <div class="comment_content">
+                      <p class="text">
+                        <a href="javascript:;">哞哞牛娃:</a>
+                        <span>那就起来写吧</span>
+                      </p>
+                      <span class="datetime">20分钟前</span>
+                    </div>
+                    <div class="comment_action">
+                      <a class="delete_button" href="javascript:;">删除</a>
+                      <a href="javascript:;">回复</a>
+                      <a href="javascript:;">赞</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 评论模板 -->
+    <div id="template" style="display: none;">
+      <div class="item">
+        <div class="comment_author">
+          <img src="./uploads/avatar.jpg" alt="" />
+        </div>
+        <div class="comment_content">
+          <p class="text">
+            <a href="javascript:;">哞哞牛娃:</a>
+            <span>那就起来写吧</span>
+          </p>
+          <span class="datetime">20分钟前</span>
+        </div>
+        <div class="comment_action">
+          <a class="delete_button" href="javascript:;">删除</a>
+          <a href="javascript:;">回复</a>
+          <a href="javascript:;">赞</a>
+        </div>
+      </div>
+    </div>
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 高亮效果
+      $('.input-box textarea')
+        .focus(function () {
+          $(this)
+            .parent()
+            .addClass('actived')
+        })
+        .blur(function () {
+          $(this)
+            .parent()
+            .removeClass('actived')
+        })
+      // 字数统计
+      $('.input-box textarea').on('input', function () {
+        // console.log('input')
+        let value = $(this).val()
+        // console.log('value:', value)
+        // $('.words span').text(value.length)
+        $('.words span').html(value.length)
+        // 启用禁用
+        if (value.length === 0) {
+          $('.publish_btn').addClass('disabled')
+        } else {
+          $('.publish_btn').removeClass('disabled')
+        }
+      })
+      // 设置初始文本
+      // 设置默认禁用状态
+      $('.input-box textarea').trigger('input')
+    </script>
+  </body>
+</html>

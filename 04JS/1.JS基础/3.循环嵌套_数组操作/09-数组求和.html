@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数组求和案例
+        let arr = [2, 6, 1, 7, 4]
+        // 求和变量
+        let sum = 0
+        // 求平均值变量
+        let average = 0
+        // 遍历数组
+        for (let i = 0; i < arr.length; i++) {
+            // console.log(arr[i])
+            // sum = sum + arr[i]
+            // arr[i] 就是数组里面的每个值 比如 2， 3
+            sum += arr[i]
+        }
+        average = sum / arr.length
+        document.write(`这个同学的总分是: ${sum}, 平均分是:${average}`)
+    </script>
+</body>
+
+</html>

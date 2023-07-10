@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+
+	<script type="text/javascript">
+
+		// 闭包：一个作用域有权访问另外一个作用域的局部变量
+		// 作用：延申变量的使用范围
+
+		function foo(a) {
+			console.log(a);
+			let i = 0;
+			// 函数内部分函数
+			function bar() {
+					console.log(++i);
+			}
+			// 将函数做为返回值
+			return bar;
+		}
+		// fn 即为闭包函数
+		let a = 58
+		let fn = foo(a);
+
+		fn(); // 1
+		fn(); // 2
+		fn(); // 3
+	</script>
+</body>
+</html>

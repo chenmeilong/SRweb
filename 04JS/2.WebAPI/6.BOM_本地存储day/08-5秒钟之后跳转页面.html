@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.itcast.cn">支付成功，<span>5</span> 秒之后跳转首页</a>
+    <script>
+        let a = document.querySelector('a')
+        let num = 5
+        let timer = setInterval(function () {
+            num--
+            a.innerHTML = `支付成功，<span>${num}</span> 秒之后跳转首页`
+            if (num === 0) {
+                clearInterval(timer)
+                // 跳转页面
+                location.href = 'http://www.itcast.cn'
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

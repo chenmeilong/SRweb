@@ -1,0 +1,16 @@
+{
+  "name": "promise",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01.使用then-fs读取文件内容.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "then-fs": "^2.0.0"
+  }
+}

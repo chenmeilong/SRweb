@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/echarts.min.js"></script>
+  </head>
+  <body>
+    <div id="test_chart" style="width: 600px; height: 400px"></div>
+    <script>
+
+      var myChart = echarts.init(document.getElementById("test_chart"));
+      var option; // 指定图表的配置项和数据
+
+      // 模拟数据
+    var data1 = [120, 200, 150, 80, 70, 110, 130];
+    var data2 = [50, 80, 60, 20, 30, 40, 60];
+    var data3 = [100, 150, 110, 50, 60, 90, 120];
+    option = {
+    xAxis: {
+        type: 'category',
+        data: ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+    },
+    yAxis: [
+        {
+            type: 'value'
+        },
+        {
+            type: 'value',
+            position: 'right'
+        }
+    ],
+    series: [
+        {
+            name: 'Series1',
+            data: data1,
+            type: 'line',
+            yAxisIndex: 0 // 使用左侧的 Y 轴 (第一个 Y 轴)
+        },
+        {
+            name: 'Series2',
+            data: data2,
+            type: 'line',
+            yAxisIndex: 1 // 使用右侧的 Y 轴 (第二个 Y 轴)
+        },
+        {
+            name: 'Series3',
+            data: data3,
+            type: 'line',
+            yAxisIndex: 0 // 使用左侧的 Y 轴 (第一个 Y 轴)
+        }
+    ]
+};
+
+      myChart.setOption(option);
+    </script>
+  </body>
+</html>

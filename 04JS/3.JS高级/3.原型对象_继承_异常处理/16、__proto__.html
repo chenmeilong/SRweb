@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+			
+		//  构造函数
+		function Person (uname, age) {
+			this.uname = uname;
+			this.age = age;
+		}
+		// 原型对象   隐式原型  
+		Person.prototype.eat = function () {
+			console.log('吃饭')
+		}
+		// 实例对象
+		let obj = new Person('阿飞', 22);
+		// 每一个对象都有一个属性：__proto__  又叫 对象原型   显示原型
+		// 作用：用于指向原型对象(prototype)
+		console.log(obj.__proto__ === Person.prototype);  //true
+	</script>
+
+
+</body>
+</html>

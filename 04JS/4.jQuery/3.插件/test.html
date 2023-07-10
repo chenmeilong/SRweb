@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+    </head>
+    <body>
+    	
+        <script type="text/javascript">
+            const _shouldUpdate = (oldVersion, newVersion) => {
+                // 补全代码
+                oldVersionArr = oldVersion.split('.')
+                newVersionArr = newVersion.split('.')
+                for (let i = 0; i < oldVersionArr.length; i++) {
+                    if(oldVersionArr[i]<newVersionArr[i]){
+                        return true
+                    }
+                    else if (oldVersionArr[i]>newVersionArr[i]){
+                        return false
+                    }
+                }
+                return false
+            }
+            console.log(_shouldUpdate('3.8.4','3.8.5'));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+			
+
+
+
+		// forEach：用于遍历数组
+		// let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+		// arr.forEach( function (item, index, o) {
+		// 	// 第一个参数：代表数组的每一项（每个元素）
+		// 	// 第二个参数：代表数组的每一项的索引值（索引值）
+		// 	// 第三个参数：代表当前数组本身
+		// 	// 三个参数是可选的
+		// 	console.log(item, index, o);
+		// } );
+
+		// for (let i = 0; i < arr.length; i++) {
+		// 	arr[i]
+		// }
+
+
+
+		let arr = [
+					{uname :'阿飞', age : 22, sex : '男'},
+					{uname :'张三丰', age : 23, sex : '男'},
+					{uname :'李寻欢', age : 21, sex : '男'},
+					{uname :'张三丰1', age : 23, sex : '男'},
+					{uname :'李寻欢1', age : 21, sex : '男'},
+					{uname :'张三丰2', age : 23, sex : '男'},
+					{uname :'李寻欢2', age : 21, sex : '男'},
+					{uname :'张三丰2', age : 23, sex : '男'},
+					{uname :'李寻欢2', age : 21, sex : '男'},
+				];
+
+		arr.forEach( item => {
+			console.log(`姓名:${item.uname},年龄${item.age},性别${item.sex}`);
+		} );
+
+
+	</script>
+	
+</body>
+</html>

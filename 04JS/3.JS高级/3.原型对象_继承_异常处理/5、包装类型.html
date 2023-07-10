@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// 属性，方法
+		let str = 'abcd';
+		console.log(str instanceof Object);  //false
+		str.replace();    //调用方法的瞬间转换成包装对象
+		console.log(str instanceof Object);   //false 
+
+		let str2 = new String('abc');
+		console.log(str2 instanceof Object);  //true
+
+	</script>
+	
+</body>
+</html>

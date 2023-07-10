@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		// "use strict";
+		// 正常模式、严格模式
+		// 开启严格模式："use strict";
+		// "use strict"如果这句话放到全局的开头，全局都要严格模式
+		// "use strict"如果整句话放到了函数的开头，代表这个函数内部严格
+		
+		// 1、变量必须定义再使用
+		// 2、普通函数中的this指向undefined
+		// 3、函数的形参不准重名
+
+
+		// n = 2;  //报错
+		// function fn () {
+		// 	console.log(this);
+		// }
+		// fn();
+		function fn (a, a) {
+			console.log( a + a );
+		}
+		fn(1, 2);
+
+
+	</script>
+	
+</body>
+</html>

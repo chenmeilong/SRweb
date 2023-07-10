@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink {
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>第1个</button><button>第2个</button><button>第3个</button><button>第4个</button><button>第5个</button>
+    <script>
+        let btns = document.querySelectorAll('button')
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function () {
+                // this.classList.add('pink')
+                // 干掉所有人
+                for (let j = 0; j < btns.length; j++) {
+                    btns[j].classList.remove('pink')
+                }
+                // 复活我自己
+                this.classList.add('pink')
+            })
+        }
+    </script>
+</body>
+
+</html>

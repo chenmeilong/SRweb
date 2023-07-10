@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+			
+
+		// function Person () {}
+		// let o = new Person();
+
+
+		// ES6：
+		// 类的本质：函数
+		class Person {}
+		let obj = new Person();
+		console.log( typeof Person );
+		console.log( Person.prototype );
+		console.log( obj.__proto__ );
+
+		// 语法糖
+		// let j = 1;
+		// j = j + 1;
+		// j++
+
+
+		let func = {
+			name:'jack',
+			age: 13
+		}
+		console.log(typeof func);   //这是一个对象
+
+		function Stu () {
+			// 设置属性
+
+		}
+		console.log(Stu.prototype)
+
+		let fn = new Function('a', 'b', 'console.log(123)');  //函数可以用对象的方式创建，类型还是函数
+		console.log(typeof fn);
+
+	</script>
+
+
+</body>
+</html>

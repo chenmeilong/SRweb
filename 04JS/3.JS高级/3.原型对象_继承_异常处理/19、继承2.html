@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+
+  
+	<script type="text/javascript">
+
+		// 构造函数
+		function Person () {
+			this.head = 1;
+			this.eyes = 2;
+			this.legs = 2;
+
+			this.say = function () {console.log('say');}
+			this.eat = function () {console.log('eat');}
+		}
+
+		// new Person()==>{
+		// 	head : 1,
+		// 	eyes : 2,
+		// 	legs : 2,
+		// 	say : function () {console.log('chi')},
+		// 	eat : function () {console.log('he')},
+		// }
+
+
+		// console.log( new Person() );
+
+		function Chinese () {
+			this.language = '汉语';
+			this.skin = 'yellow';
+		}
+
+		// 继承:
+		// 1、把对象赋值给原型对象  new出来的是新对象
+		Chinese.prototype = new Person();  
+		// 2、指回构造函数本身
+		Chinese.prototype.constructor = Chinese;
+
+		console.log(Chinese.prototype);
+
+		// 实例对象
+		let c1 = new Chinese();
+		console.log(c1);
+
+
+		// --------------------------------------------
+
+		function Japanese () {
+			this.language = '日语';
+			this.skin = 'yellow';
+		}
+		Japanese.prototype.func = function () {console.log('我是japanese通用函数');}
+
+		// 1、把对象赋值给原型对象
+		Japanese.prototype = new Person();   //这是个父类实例化的对象
+		// 2、指回构造函数
+		Japanese.prototype.constructor = Japanese;   //里面本来没有constructor 属性  这是后加的属性
+
+		let j1 = new Japanese();
+
+		console.log(j1);
+		console.log(new Person());
+		j1.func()                             //这样会出问题因为 被覆盖掉了  Japanese.prototype.func  继承的时候被覆盖掉了
+
+
+		// function test(){
+		// 	this.name = 'English';
+		// }
+		// test.prototype.func = function(){console.log('我是func通用函数');}
+		// let test1 = new test()
+		// test1.func()
+
+	</script>
+
+
+
+</body>
+</html>

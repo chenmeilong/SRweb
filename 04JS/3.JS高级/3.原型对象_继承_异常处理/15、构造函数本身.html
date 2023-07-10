@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+			
+		// 每一个原型对象都有一个属性：constructor，用于指回构造函数本身
+		// function Person () {}
+		// console.log( Person.prototype );   
+		// // constructor：用于指回构造函数本身
+		// console.log(Person.prototype.constructor);
+
+
+		// function Dog () {}
+		// console.log(Dog.prototype);
+		// console.log( Dog.prototype.constructor );
+
+
+		// function Cat () {}
+		// console.log( Cat.prototype );
+		// console.log( Cat.prototype.constructor );
+
+
+
+		
+		function Person (uname, age) {
+			this.uname = uname;
+			this.age = age;
+			this.addr = '北京'
+		}
+		// // 实例化对象
+		let obj = new Person('阿飞', 22);
+
+		console.log( obj );
+		console.log( Person.prototype );
+
+
+
+
+
+
+
+		// 构造函数：也是函数，通常和new一起使用，用于创建对象
+		
+		// function Star () {
+		// 	this.uname = '阿伦';
+		// 	this.age =  22;
+		// }
+		// // 实例对象
+		// let obj = new Star();
+		// console.log( Star.prototype );
+
+
+
+
+	</script>
+
+
+</body>
+</html>

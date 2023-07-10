@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 全局变量  全局能用
+        // let num = 10
+        // console.log(num)
+        // function fn() {
+        //     console.log(num)
+        // }
+        // fn()
+        // if (true) {
+        //     console.log(num)
+        // } 
+        // 2. 在局部作用域下，变量是 局部变量
+        // 函数内的变量，只能给内部使用，函数外面不能使用
+        // function fn() {
+
+        //     let num = 10
+        //     console.log(num)
+        //     function fn1() {
+        //         console.log(num)
+        //         let num2 = 20
+        //     }
+        //     fn1()
+        //     // console.log(num2)  num2 is not defined
+        // }
+        // fn()
+        // console.log(num)  num is not defined
+
+        // 3. 块级变量  
+        // if (true) {
+        //     let num = 10
+        // }
+        // // console.log(num)
+        // for (let i = 0; i < 5; i++) {
+        //     console.log(i)
+        // }
+        // console.log(i)
+
+        // function fn() {
+        //     // let num = 10
+        //     num = 10
+        // }
+        // fn()
+        // if (true) {
+        //     num = 10
+        // }
+        // console.log(num)
+        // function fn(x, y) {
+        //     // x 和 y 可以看做是 局部变量
+        //     document.write(x + y)
+        // }
+        // fn(1, 2)
+        // console.log(x) //错误了
+
+        let num = 10
+
+        function fn() {
+            let i = 0
+            console.log(i);
+        }
+        fn()
+
+        if (true) {
+            let j = 0
+        }
+    </script>
+
+</body>
+
+</html>

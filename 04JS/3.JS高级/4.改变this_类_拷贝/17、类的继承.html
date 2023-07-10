@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+		
+
+		// class Father {
+		// 	constructor (uname, age) {
+		// 		this.uname = uname;
+		// 		this.age = age;
+		// 	}
+		// 	qian () {
+		// 		console.log('赚他一个亿');
+		// 	}
+		// }
+		// // 继承：
+		// class Son extends Father {
+		// 	func (){
+		// 		console.log('我是son通用函數');
+		// 	}
+		// }
+		// let obj = new Son('儿子', 2);
+		// console.log( obj );
+		// obj.qian();
+
+
+
+
+
+		class Person {
+			constructor (uname, age, sex) {
+				this.uname = uname;
+				this.age = age;
+				this.sex = sex;
+				this.head = 1;
+				this.eyeys = 2;
+			}
+			say () {
+				console.log('说话');
+			}
+			eat () {
+				console.log('吃饭');
+			}
+		}
+
+		// extends：申明一个类为子类
+		class Star extends Person {}
+		let s = new Star('阿飞', 22, '男');
+		console.log(s);
+		s.say()
+
+	</script>
+
+
+</body>
+</html>

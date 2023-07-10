@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-展开&收起动画</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        margin: 20px;
+        padding: 20px;
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>展开&收起</h3>
+    <p>jQuery 中封装了元素显示/隐藏的快捷操作，并且支持动画</p>
+
+    <button class="slide-down">展开</button>
+    <button class="slide-up">收起</button>
+    <button class="slide-toggle">展开&收起</button>
+
+    <div class="box"></div>
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+      // 1.slideDown展开
+      $('.slide-down').click(function () {
+        $('.box').slideDown(4000)
+      })
+
+      // 2.slideUp收起
+      $('.slide-up').click(function () {
+        $('.box').slideUp(4000)
+      })
+      // 3.slideToggle展开&收起
+      $('.slide-toggle').click(function () {
+        $('.box').slideToggle(1000)
+      })
+    </script>
+  </body>
+</html>

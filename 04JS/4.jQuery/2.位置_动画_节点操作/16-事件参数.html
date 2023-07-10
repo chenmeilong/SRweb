@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16-事件参数</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .outer {
+        width: 200px;
+        height: 150px;
+        margin-top: 15px;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        width: 100px;
+        height: 50px;
+        background-color: yellowgreen;
+      }
+
+      hr {
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>事件参数</h3>
+    <p>jQuery绑定的事件中也可以获取事件参数,用法和之前完全一致</p>
+
+    <hr />
+    <div class="outer">
+      <div class="box"></div>
+    </div>
+    <hr />
+    <a href="https://www.taobao.com/">淘宝</a>
+    <hr />
+    <input type="text" placeholder="请输入内容" />
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+      // 1. 事件触发对象
+      $('.outer').click(function (event) {
+        // console.log(event)
+        console.log('outer-click')
+      })
+
+      // 2. 阻止冒泡
+      $('.box').click(function (e) {
+        console.log('box-click')
+        e.stopPropagation()
+      })
+
+      // 3. 阻止默认行为
+      $('a').click(function (e) {
+        e.preventDefault()
+      })
+
+      // 4. 判断键盘按键
+      $('input').keyup(function (e) {
+        console.log(e.keyCode)
+      })
+    </script>
+  </body>
+</html>

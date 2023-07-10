@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>09-日期选择器</title>
+    <!-- 导入日期选择器的样式 -->
+    <link rel="stylesheet" href="./datepicker/datepicker.css" />
+    <style>
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>09-日期选择器</h3>
+    <p>jQuery 的日期选择器插件 datepicker , 让用户在不同的浏览器下可以用一致的方式来选择日期</p>
+    <!-- 准备html结构 -->
+    <input type="text" class="datepicker" />
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <!-- 导入日期选择器插件 -->
+    <script src="./datepicker/datepicker.js"></script>
+    <!-- 导入语言包 -->
+    <script src="./datepicker/i18n/datepicker.zh-CN.js"></script>
+    <script>
+      $('.datepicker').datepicker({
+        language: 'zh-CN',  
+        autoPick: true,
+        autoHide: true,
+      })
+    </script>
+  </body>
+</html>

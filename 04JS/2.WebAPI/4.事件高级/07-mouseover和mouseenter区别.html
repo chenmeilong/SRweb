@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            margin: 100px auto;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .son {
+
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        let fa = document.querySelector('.father')
+        let son = document.querySelector('.son')
+        fa.addEventListener('mouseenter', function () {
+            console.log(111)   //mouseenter避免了父子之间切换触发事件冒泡
+        })
+    </script>
+</body>
+
+</html>

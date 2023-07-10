@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>14-操纵value</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>14-操纵value</h3>
+    <p>jQuery 中封装了操纵value属性的方法，可以取值和赋值</p>
+    <!-- 测试用输入框 -->
+    <input class="text" type="text" />
+    <!-- 引入 jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1. 赋值
+      $('.text').val('黑马程序员！')
+
+      // 2. 取值
+      $('.text').blur(function () {
+        let value = $(this).val()
+        console.log('value:', value)
+      })
+    </script>
+  </body>
+</html>

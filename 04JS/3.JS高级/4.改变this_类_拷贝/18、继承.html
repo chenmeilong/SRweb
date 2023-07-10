@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Father {
+			constructor (uname, age) {
+				this.uname = uname;
+				this.age = age;
+			}
+			qian () {
+				console.log('赚他一个亿');
+			}
+		}
+
+		// 继承：
+		// 子类有自己的成员
+		// super：调用父类的方法
+		class Son extends Father {
+			// 继承中，如果子类有自己的constructor，必须通过super才可以调用父类的方法
+			constructor (uname, age, score) {
+				// 先调用super，再设定自己的成员
+				super(uname, age);
+
+				this.score = score;
+			}
+
+			qian () {
+				// 方法就近原则，
+				// 如果依旧想要调用父类里面的方法，用super
+				super.qian();
+				console.log('2mq');
+			}
+		}
+
+		let obj = new Son('阿飞', 6, 99);
+		// console.log(obj);
+		// 就近原则
+		obj.qian();
+
+	</script>
+</body>
+</html>

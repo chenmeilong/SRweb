@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>小兔鲜儿 - 新鲜 惠民 快捷!</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/center.css" />
+    <script src="./assets/jquery/jquery-3.5.1.min.js"></script>
+    <script>
+      $(function () {
+        console.log('width:', $('.kuzi').width())
+      })
+      window.onload = function () {
+        console.log('width:', $('.kuzi').width())
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 项部导航 -->
+    <div class="xtx_topnav">
+      <div class="wrapper">
+        <!-- 顶部导航 -->
+        <ul class="xtx_navs">
+          <li>
+            <a href="./login.html">请先登录</a>
+          </li>
+          <li>
+            <a href="./register.html">免费注册</a>
+          </li>
+          <li>
+            <a href="javascript:;">我的订单</a>
+          </li>
+          <li>
+            <a href="javascript:;">会员中心</a>
+          </li>
+          <li>
+            <a href="javascript:;">帮助中心</a>
+          </li>
+          <li>
+            <a href="javascript:;">在线客服</a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i class="mobile sprites"></i>
+              手机版
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 头部 -->
+    <div class="xtx_header clearfix">
+      <div class="wrapper">
+        <!-- 网站Logo -->
+        <h1 class="xtx_logo"><a href="/">小兔鲜儿</a></h1>
+        <!-- 主导航 -->
+        <div class="xtx_navs">
+          <ul class="clearfix">
+            <li>
+              <a href="javascript:;">首页</a>
+            </li>
+            <li>
+              <a href="javascript:;">生鲜</a>
+            </li>
+            <li>
+              <a href="javascript:;">美食</a>
+            </li>
+            <li>
+              <a href="javascript:;">餐厨</a>
+            </li>
+            <li>
+              <a href="javascript:;">电器</a>
+            </li>
+            <li>
+              <a href="javascript:;">居家</a>
+            </li>
+            <li>
+              <a href="javascript:;">洗护</a>
+            </li>
+            <li>
+              <a href="javascript:;">孕婴</a>
+            </li>
+            <li>
+              <a href="javascript:;">服装</a>
+            </li>
+          </ul>
+        </div>
+        <!-- 站内搜索 -->
+        <div class="xtx_search clearfix">
+          <!-- 购物车 -->
+          <a href="javascript:;" class="xtx_search_cart sprites">
+            <i>2</i>
+          </a>
+          <!-- 搜索框 -->
+          <div class="xtx_search_wrapper">
+            <input type="text" placeholder="搜一搜" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="xtx_body">
+      <div class="wrapper">
+        <!-- 侧边栏 -->
+        <div class="xtx_body_aside">
+          <!-- 用户信息 -->
+          <div class="user_meta">
+            <div class="avatar">
+              <img src="./uploads/avatar_1.png" alt="" />
+            </div>
+            <h4>张小花</h4>
+            <p>黄金会员</p>
+          </div>
+          <!-- 管理 -->
+          <div class="user_manage">
+            <h4>我的账户</h4>
+            <div class="links">
+              <a href="javascript:;" class="active">个人中心</a>
+              <a href="javascript:;">消息通知</a>
+              <a href="javascript:;">个人信息</a>
+              <a href="javascript:;">安全设置</a>
+              <a href="javascript:;">地址管理</a>
+              <a href="javascript:;">我的积分</a>
+              <a href="javascript:;">我的足迹</a>
+              <a href="javascript:;">邀请有礼</a>
+              <a href="javascript:;">幸运抽奖</a>
+            </div>
+
+            <h4>交易管理</h4>
+            <div class="links">
+              <a href="javascript:;">我的订单</a>
+              <a href="javascript:;">优惠券</a>
+              <a href="javascript:;">礼品卡</a>
+              <a href="javascript:;">评价晒单</a>
+              <a href="javascript:;">售后服务</a>
+            </div>
+            <h4>我的收藏</h4>
+            <div class="links">
+              <a href="javascript:;">收藏的商品</a>
+              <a href="javascript:;">收藏的商品</a>
+              <a href="javascript:;">收藏的商品</a>
+            </div>
+            <h4>帮助中心</h4>
+            <div class="links">
+              <a href="javascript:;">帮助中心</a>
+              <a href="javascript:;">在线客服</a>
+            </div>
+          </div>
+        </div>
+        <!-- 主要内容 -->
+        <div class="xtx_body_main">
+          <!-- 概览 -->
+          <div class="xtx_overview">
+            <div class="item">
+              <a href="javascript:;"> <i>1</i>会员中心 </a>
+              <a href="javascript:;"> <i>1</i>安全设置 </a>
+              <a href="javascript:;"> <i>1</i>地址管理 </a>
+            </div>
+            <div class="item">
+              <a href="javascript:;"> <span>6</span>优惠券 </a>
+              <a href="javascript:;"> <span>70</span>礼品卡 </a>
+              <a href="javascript:;"> <span>120</span>积分 </a>
+            </div>
+          </div>
+
+          <!-- 我的订单 -->
+          <div class="xtx_orders xtx_panel">
+            <div class="xtx_panel_header">
+              <h4>我的订单</h4>
+              <a href="javascript:;" class="more">查看全部</a>
+            </div>
+            <!-- 订单列表 -->
+            <ul class="orders">
+              <li>
+                <div class="order_goods">
+                  <!-- 商品缩略图 -->
+                  <div class="thumb">
+                    <img src="./uploads/order_goods_1.jpg" alt="" />
+                  </div>
+                  <!-- 商品信息 -->
+                  <div class="info">
+                    <p class="name">拉夫劳伦t恤男正品圆领短袖拉夫劳伦t恤男正品圆领短袖拉夫劳伦t恤男正品圆领短袖</p>
+                    <p class="meta">颜色：白色 尺码：M 数量：1</p>
+                  </div>
+                  <div class="status">
+                    <span>待付款</span>
+                    <a href="javascript:;"></a>
+                  </div>
+                </div>
+                <div class="order_payment">
+                  <span class="price">￥99.00</span>
+                  <span>（含运费：¥10.00元）</span>
+                  <span>在线支付</span>
+                </div>
+                <div class="order_action">
+                  <a href="javascript:;" class="primary">立即付款</a>
+                  <a href="javascript:;">查看详情</a>
+                  <a href="javascript:;">取消订单</a>
+                </div>
+              </li>
+              <li>
+                <div class="order_goods">
+                  <!-- 商品缩略图 -->
+                  <div class="thumb">
+                    <img src="./uploads/order_goods_2.jpg" alt="" />
+                  </div>
+                  <!-- 商品信息 -->
+                  <div class="info">
+                    <p class="name">拉夫劳伦t恤男正品圆领短袖拉夫劳伦t恤男正品圆领短袖拉夫劳伦t恤男正品圆领短袖</p>
+                    <p class="meta">颜色：白色 尺码：M 数量：1</p>
+                  </div>
+                  <div class="status">
+                    <span>待收货</span>
+                    <a href="javascript:;">查看物流</a>
+                  </div>
+                </div>
+                <div class="order_payment">
+                  <span class="price">￥99.00</span>
+                  <span>（含运费：¥10.00元）</span>
+                  <span>在线支付</span>
+                </div>
+                <div class="order_action">
+                  <a href="javascript:;" class="primary">确认收货</a>
+                  <a href="javascript:;">查看详情</a>
+                  <a href="javascript:;">再次购买</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 我的收藏 -->
+          <div class="xtx_collects xtx_panel">
+            <div class="xtx_panel_header">
+              <h4>收藏的商品</h4>
+              <a href="javascript:;" class="more">查看全部</a>
+            </div>
+            <div class="xtx_panel_goods">
+              <a href="javascript:;" class="item">
+                <div class="img-box">
+                  <img src="./uploads/collect_goods_1.jpg" alt="" />
+                </div>
+                <p class="name">人本秋季厚底帆布鞋韩版低帮增高学生</p>
+                <p class="price"><small>￥</small>55</p>
+              </a>
+              <a href="javascript:;" class="item">
+                <div class="img-box">
+                  <img src="./uploads/collect_goods_2.jpg" alt="" />
+                </div>
+                <p class="name">迪士尼真皮针扣表带宽度14-16mm规格双色压纹</p>
+                <p class="price"><small>￥</small>20.9</p>
+              </a>
+              <a href="javascript:;" class="item">
+                <div class="img-box">
+                  <img src="./uploads/collect_goods_3.jpg" alt="" />
+                </div>
+                <p class="name">三都港 冷冻无公害黄花鱼700g 2条 袋装 生</p>
+                <p class="price"><small>￥</small>209</p>
+              </a>
+              <a href="javascript:;" class="item">
+                <div class="img-box">
+                  <img class="kuzi" src="./uploads/collect_goods_4.jpg" alt="" />
+                </div>
+                <p class="name">ONLY夏季新款高腰宽松七分阔腿裙裤休闲裤</p>
+                <p class="price"><small>￥</small>274.5</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- 我的足迹 -->
+          <div class="xtx_history xtx_panel">
+            <div class="xtx_panel_header">
+              <h4>我的足迹</h4>
+              <a href="javascript:;" class="more">查看全部</a>
+            </div>
+            <div class="xtx_panel_goods">
+              <a href="javascript:;" class="item">
+                <div class="img-box">
+                  <img src="./uploads/history_goods_1.jpg" alt="" />
+                </div>
+                <p class="name">拉夫劳伦t恤男正品 圆领短袖</p>
+                <p class="price"><small>￥</small>99</p>
+              </a>
+              <a href="javascript:;" class="item">
+                <div class="img-box">
+                  <img src="./uploads/history_goods_2.jpg" alt="" />
+                </div>
+                <p class="name">李宁跑步鞋男鞋空气弧 2018春季款</p>
+                <p class="price"><small>￥</small>171.9</p>
+              </a>
+              <a href="javascript:;" class="item">
+                <div class="img-box">
+                  <img src="./uploads/history_goods_3.jpg" alt="" />
+                </div>
+                <p class="name">三都港 冷冻无公害黄花鱼700g 2条 袋装 生</p>
+                <p class="price"><small>￥</small>209</p>
+              </a>
+              <a href="javascript:;" class="item">
+                <div class="img-box">
+                  <img src="./uploads/history_goods_4.jpg" alt="" />
+                </div>
+                <p class="name">ONLY夏季新款高腰宽松七分阔腿裙裤休闲裤</p>
+                <p class="price"><small>￥</small>274.5</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 公共底部 -->
+    <div class="xtx_footer">
+      <div class="wrapper">
+        <!-- 联系我们 -->
+        <div class="contact clearfix">
+          <dl>
+            <dt>客户服务</dt>
+            <dd class="chat">在线客服</dd>
+            <dd class="feedback">问题反馈</dd>
+          </dl>
+          <dl>
+            <dt>关注我们</dt>
+            <dd class="weixin">公众号</dd>
+            <dd class="weibo">微博</dd>
+          </dl>
+          <dl>
+            <dt>下载APP</dt>
+            <dd class="qrcode">
+              <img src="./uploads/qrcode.jpg" />
+            </dd>
+            <dd class="download">
+              <span>扫描二维码</span>
+              <span>立马下载APP</span>
+              <a href="javascript:;">下载页面</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>服务热线</dt>
+            <dd class="hotline">
+              400-0000-000
+              <small>周一至周日 8:00-18:00</small>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!-- 其它 -->
+      <div class="extra">
+        <div class="wrapper">
+          <!-- 口号 -->
+          <div class="slogan">
+            <a href="javascript:;" class="price">价格亲民</a>
+            <a href="javascript:;" class="express">物流快捷</a>
+            <a href="javascript:;" class="quality">品质新鲜</a>
+          </div>
+          <!-- 版权信息 -->
+          <div class="copyright">
+            <p>
+              <a href="javascript:;">关于我们</a>
+              <a href="javascript:;">帮助中心</a>
+              <a href="javascript:;">售后服务</a>
+              <a href="javascript:;">配送与验收</a>
+              <a href="javascript:;">商务合作</a>
+              <a href="javascript:;">搜索推荐</a>
+              <a href="javascript:;">友情链接</a>
+            </p>
+            <p>CopyRight &copy; 小兔鲜儿</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

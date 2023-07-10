@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+    </head>
+    <body>
+    	
+        <script type="text/javascript">
+        const _rank = array => {
+            // 补全代码
+            array.sort((a,b)=>{
+                return (b.chinese+b.math+b.english)-(a.chinese+a.math+a.english)
+            })
+            return array
+        }
+        array = [{name:'student1',chinese:90,math:80,english:75},{name:'student2',chinese:90,math:60,english:75}]
+        console.log(_rank(array));
+        </script>
+    </body>
+</html>

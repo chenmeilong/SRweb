@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>08-内容操纵</title>
+    <style>
+      body {
+        padding: 0 30px 40px;
+      }
+
+      p {
+        color: #333;
+      }
+      div {
+        margin: 10px;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        background-color: yellowgreen;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>08-内容操纵</h3>
+    <p>jQuery 中封装了设置和读取网页元素文本内容的方法</p>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      //  1. 设置普通文本
+      // $('.box1').html('黑马程序员')
+      // $('.box2').text('黑马程序员')
+
+      // 2. 设置标签
+      $('.box1').html('    <a href="#">黑马程序员</a>')
+      $('.box2').text('    <a href="#">黑马程序员</a>')
+
+      // 3. 取值
+      let box1Html = $('.box1').html()
+      let box1Text = $('.box1').text()
+      console.log('box1Html:', box1Html)
+      console.log('box1Text:', box1Text)
+
+      // 4. 链式编程
+      let $box1 = $('.box1')
+      // let $res = $box1.html(' <a href="#">传智教育</a>')
+      // console.log($box1 === $res)
+      $box1.html(' <a href="#">传智教育</a>').click(function () {
+        console.log('黑马程序员')
+      })
+    </script>
+  </body>
+</html>

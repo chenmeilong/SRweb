@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11-克隆</title>
+    <style>
+      p {
+        color: #333;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        background-color: pink;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>11-克隆</h3>
+    <p>
+      jQuery 中封装了克隆(复制)，节点的方法
+    </p>
+    <!-- 测试标签 -->
+    <button class="clone">克隆(不带事件)</button>
+    <button class="deep-clone">克隆(带事件)</button>
+    <div class="box">
+      <button>按钮</button>
+    </div>
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1. 为box中的按钮绑定事件: 把box的背景色变成黄绿色
+      $('.box button').click(function () {
+        $(this)
+          .parent()
+          .css('backgroundColor', 'yellowgreen')
+      })
+
+      // 2. 普通克隆
+      $('.clone').click(function () {
+        let $clone = $('.box')
+          .first()                      //必须加first 因为第二次点克隆会克隆所有的.box
+          .clone()
+        $('body').append($clone)
+      })
+
+      // 3. 和事件一起克隆
+      $('.deep-clone').click(function () {
+        let $clone = $('.box')
+          .first()
+          .clone(true)
+        $('body').append($clone)
+      })
+    </script>
+  </body>
+</html>

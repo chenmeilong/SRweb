@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是第1个小li</li>
+        <li>我是第2个小li</li>
+        <li>我是第3个小li</li>
+        <li>我是第4个小li</li>
+        <li>我是第5个小li</li>
+    </ul>
+    <script>
+        // 不要每个小li注册事件了  而是把事件委托给他的爸爸 
+        // 事件委托是给父级添加事件 而不是孩子添加事件
+        let ul = document.querySelector('ul')
+        ul.addEventListener('click', function (e) {
+            // alert('我点击了')
+            // 得到当前的元素
+            // console.log(e.target)
+            e.target.style.color = 'red'
+        })
+    </script>
+</body>
+
+</html>

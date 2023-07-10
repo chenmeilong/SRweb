@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="login">
+      <div class="wrap-box">
+        <!-- 切换登录场景 -->
+        <div class="multi-type">
+          <a href="javascript:;" data-label="#account" class="label active">
+            账号登录
+          </a>
+          <a href="javascript:;" data-label="#secure" class="label">安全登录</a>
+          <a href="javascript:;" data-label="#phone" class="icon"></a>
+        </div>
+        <div class="login-type">
+          <!-- 账号登录 -->
+          <div class="account" id="account">
+            <div class="input-box username">
+              <input type="text" />
+            </div>
+            <div class="input-box password">
+              <input type="text" />
+            </div>
+            <div class="extra-box">
+              <label for="login_status">
+                <input id="login_status" type="checkbox" />
+                <span>记住我</span>
+              </label>
+              <a href="javascript:;">忘记密码</a>
+            </div>
+            <div class="button-box">
+              <button>登录</button>
+            </div>
+            <p class="text-box">
+              还没有微博? <a href="javascript:;">立即注册!</a>
+            </p>
+            <p class="social-box">
+              <span>基它登录：</span>
+              <a href="javascript:;" class="taobao"></a>
+              <a href="javascript:;" class="qq"></a>
+              <a href="javascript:;" class="yidong"></a>
+              <a href="javascript:;" class="tianyi"></a>
+              <a href="javascript:;" class="qihu"></a>
+            </p>
+          </div>
+          <!-- 手机号登录 -->
+          <div class="phone" id="phone">
+            <div class="input-box phone-number">
+              <input type="text" />
+            </div>
+            <div class="verify-box">
+              <button>获取短信验证码</button>
+              <input class="code" type="text" />
+            </div>
+            <div class="extra-box">
+              <label for="login_status">
+                <input id="login_status" type="checkbox" />
+                <span>记住我</span>
+              </label>
+              <a href="javascript:;">忘记密码</a>
+            </div>
+            <div class="button-box">
+              <button>登录</button>
+            </div>
+            <p class="text-box">
+              还没有微博? <a href="javascript:;">立即注册!</a>
+            </p>
+            <p class="social-box">
+              <span>基它登录：</span>
+              <a href="javascript:;" class="taobao"></a>
+              <a href="javascript:;" class="qq"></a>
+              <a href="javascript:;" class="yidong"></a>
+              <a href="javascript:;" class="tianyi"></a>
+              <a href="javascript:;" class="qihu"></a>
+            </p>
+          </div>
+          <!-- 二维码登录 -->
+          <div class="secure" id="secure">
+            <div class="qrcode">
+              <img src="./images/weibo.png" alt="" />
+              <span>请用最新版微博客户端扫码</span>
+            </div>
+            <p>还没有微博？<a href="javascript:;">立即注册!</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+        $('.multi-type').children().click(function(){
+            $(this).addClass('active').siblings().removeClass('active')
+            $($(this).data('label')).css('display', 'block').siblings().css('display', 'none')
+        })
+    </script>
+</body>
+</html>

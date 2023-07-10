@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+
+<body>
+    <script>
+        console.log(/a/.test('a'))
+        // * 量词 n >= 0 
+        console.log(/a*/.test(''))
+        console.log(/a*/.test('a'))
+        console.log(/a*/.test('aa'))
+        console.log(/a*/.test('aaaaaaaa'))
+        console.log(/a*/.test('b'))
+        console.log('--------------------------')
+        // + 量词 n >= 1
+        console.log(/a+/.test(''))
+        console.log(/a+/.test('a'))
+        console.log(/a+/.test('aa'))
+        console.log(/a+/.test('aaaaaaaa'))
+        console.log(/a+/.test('b'))
+        console.log('--------------------------')
+        // ? 出现 0 || 1 
+        console.log(/^a?$/.test(''))
+        console.log(/^a?$/.test('a'))
+        console.log(/^a?$/.test('aa'))
+
+        console.log('##########################');
+
+        // {n}   只能出现 n次   符号之间不要加空格
+        console.log(/^a{3}$/.test('aa'))
+        console.log(/^a{3}$/.test('aaa'))
+        console.log(/^a{3}$/.test('aaaa'))
+
+        // {n,}   >= n 
+        console.log(/^a{3,}$/.test('aa'))
+        console.log(/^a{3,}$/.test('aaa'))
+        console.log(/^a{3,}$/.test('aaaa'))
+        console.log('--------------------------')
+        // {n,m}   >= n  <= m 
+        console.log(/^a{3,6}$/.test('aa'))
+        console.log(/^a{3,6}$/.test('aaa'))
+        console.log(/^a{3,6}$/.test('aaaa'))
+        console.log(/^a{3,6}$/.test('aaaaa'))
+        console.log(/^a{3,6}$/.test('aaaaaaaa'))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+			
+
+		let str = '132642343739373635384628633124';
+
+		// 用对象保存字符以及字符次数
+		let obj = {
+			// 字符当做键，次数当做值
+			// 1 : 3,
+			// 2 : 6,
+		};
+		// 如果对象中有这个键，就让值+1，如果没有这个键，就添加这个键并且初始值为1
+		for (let i = 0; i < str.length; i++) {
+			// str[i]==>每个字符
+			// 要去obj里面判断有没有str[i]这个键
+			// obj访问str[i]这个属性，如果有就会返回一个数字那么这个时候只要让这个数值+1
+			// if里面要布尔值，如果obj[str[i]]存在，返回一个数字，隐式转换布尔值为true
+			if ( obj[str[i]] ) {
+				obj[str[i]]++;
+			} else {
+				obj[str[i]] = 1;
+			}
+
+		}
+
+		console.log(obj);
+
+		// 求出现最多的字符以及出现了几次
+		let max = 1;
+		let count = obj['1'];
+
+		for (let key in obj) {
+			if ( count < obj[key] ) {
+				count = obj[key];
+				max = key;
+			}
+		}
+ 
+		console.log( max, count );
+
+
+
+	</script>
+	
+</body>
+</html>

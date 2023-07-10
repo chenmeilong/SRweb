@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery 选择器</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+ 
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>04-jQuery <span>选择器</span></h3>
+    <p>
+      jQuery 中的选择器是用来获取 DOM 节点的，其功能类似于原生的
+      querySelectorAll 方法，jQuery 中所支持的选择器与 CSS 的选择器几乎一致。
+    </p>
+    <p>jQuery 封装了大量 DOM 操作的方法，极大的提升了开发效率！</p>
+    <p class="p">jQuery 的口号是 <span>Write Less Do More!</span></p>
+    <p id="p">jQuery 内部对浏览器之间的兼容也做了相关的处理。</p>
+    <!-- 导入 jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1. 标签选择器
+      $('p').css('backgroundColor', 'pink')
+      // 2. 类选择器
+      $('.p').css('backgroundColor', 'skyblue')
+      // 3. id选择器
+      $('#p').css('backgroundColor', 'orange')
+      // 4. 后代选择器
+      $('p span').css('backgroundColor', 'hotpink')
+    </script>
+  </body>
+</html>

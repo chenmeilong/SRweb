@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	
+		// Object：创建普通对象的构造函数 
+		let obj = new Object( {uname : '阿飞', age : 22, sex : '男'} );
+		// Object.keys：获取对象的所有键
+		let keys = Object.keys(obj)
+		console.log( keys );
+
+		// 获取对象的索引值
+		let values = Object.values(obj);
+		console.log(values);
+
+
+
+
+	    // 1.通过构造函数创建普通对象
+		let user = new Object({name: '小明', age: 15});
+
+		// 2.这种方式声明的变量称为【字面量】
+		let student = {name: '杜子腾', age: 21}
+
+		// 2.1对象语法简写
+		let name = '小红';
+		let people = {
+			name,  // 相当于 name: name
+			walk () {
+				console.log('人都要走路...');  // 相当于 walk: function () {}
+			}
+		}
+
+		console.log(student.constructor);
+		console.log(user.constructor);
+		console.log(student instanceof Object);
+	</script>
+
+
+</body>
+</html>

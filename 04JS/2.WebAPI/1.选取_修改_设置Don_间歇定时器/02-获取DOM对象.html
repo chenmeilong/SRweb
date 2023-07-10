@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>我是一个盒子</div>
+    <div>我是er个盒子</div>
+    <div class="three">我是三个盒子</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <span>就1个</span>
+    <script>
+        // 1. js 获取 第一个元素   后面的是css选择器   返回的是HTMLElement对象 没有匹配到返回null
+        let div = document.querySelector('div')
+        // let div = document.querySelector('.three')
+        console.log(div)
+
+        // let li = document.querySelector('ul li:last-child')
+        // console.log(li)
+        // 2. 获取多个元素  伪数组
+        let lis = document.querySelectorAll('ul li')
+        // console.log(lis)   [div, div, div]
+        // 通过遍历的方式，获得里面的每一个dom对象（元素）
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[i])
+        }
+        let span = document.querySelectorAll('span')
+        console.log(span)
+    </script>
+</body>
+
+</html>

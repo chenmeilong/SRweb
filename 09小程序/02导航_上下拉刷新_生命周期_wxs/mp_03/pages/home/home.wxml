@@ -1,0 +1,13 @@
+<!--pages/home/home.wxml-->
+<text>pages/home/home.wxml</text>
+
+<navigator url="/pages/message/message" open-type="switchTab">导航到消息页面</navigator>
+<navigator url="/pages/info/info" open-type="navigate">导航到info页面</navigator>
+
+<button bindtap="gotoMessage">跳转到message页面</button>
+<button bindtap="gotoInfo">跳转到info页面</button>
+
+<navigator url="/pages/info/info?name=zs&age=20">跳转到info页面</navigator>
+<button bindtap="gotoInfo2">跳转到info页面</button>
+
+<view class="box"></view>

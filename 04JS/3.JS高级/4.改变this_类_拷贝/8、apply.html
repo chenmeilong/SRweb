@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// apply：函数.apply(this, [arg1, arg2,......])
+		// function fn (a, b) {
+		// 	console.log(this, a, b);
+		// }
+
+		// let obj = {uname : '阿飞'};	
+
+		// fn.apply(obj, [111, 222]);
+
+
+		let obj = {
+			uname : '张三丰',
+			age : 22,
+			taiji : function () {
+				console.log(this);
+			}
+		}
+		let o = {uname : '张无忌', age : 16};
+		obj.taiji.apply(o);
+
+
+
+		// 数组：
+		let arr = [23, 66, 33, 19, 4, 7];
+		let re = Math.max.apply(null, arr);
+		console.log( re );
+		
+
+		// ... rest参数：剩余参数，函数，解构赋值
+		// ... 扩展运算符：数组，字符串，对象
+
+		// let arr = [23, 66, 33, 19, 4, 7];
+		// // ...扩展运算符
+		// let re = Math.max(...arr);
+		// console.log(re);
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>06-事件绑定</title>
+    <style>
+      body {
+        padding: 0 30px 40px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: yellowgreen;
+        margin: 10px 10px 10px 0;
+      }
+      input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>06-事件绑定</h3>
+    <p>在 jQuery 中以原生事件类型的名称为依据 , 封装了相对应的事件处理方法</p>
+    <ul>
+      <li>黑马程序员</li>
+      <li>北京校区</li>
+      <li>上海校区</li>
+      <li>广州校区</li>
+      <li>深圳校区</li>
+    </ul>
+    <input type="text" class="text" />
+    <div class="box"></div>
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+      // 1.为 li 添加点击事件
+      $('li').click(function () {
+        console.log('click')
+        console.log(this)
+        let $this = $(this)
+        $this.css('backgroundColor', 'pink')
+      })
+
+      // 2.为 .text 添加获得焦点事件
+      $('.text').focus(function () {
+        console.log('focus')
+      })
+
+      // 3.为 .text 添加失去焦点事件
+      $('.text').blur(function () {
+        console.log('blur')
+      })
+
+      // 4.为 .box 添加鼠标移入事件
+      $('.box').mouseenter(function () {
+        console.log('mouseenter')
+        $(this).css('backgroundColor', 'pink')
+      })
+
+      // 5.为 .box 添加鼠标移出事件
+      $('.box').mouseleave(function () {
+        console.log('mouseleave')
+        $(this).css('backgroundColor', 'yellowgreen')
+      })
+    </script>
+  </body>
+</html>

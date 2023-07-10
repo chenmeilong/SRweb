@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <from action="http://localhost:8080/jd/login" enctype="multipart/form-data">
+      <input type="file" />
+      <label for="">用户名</label>
+      <!--  这里可以简写也可以省略    -->
+      <input
+        type="text"
+        name="user"
+        placeholder="请输入用户名"
+        required
+        autofocus="autofocus"
+      />
+      <input type="submit" name="" value="登录" formnovalidate="" />
+
+      <input type="submit" />
+    </from>
+  </body>
+</html>

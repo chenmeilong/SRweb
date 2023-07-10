@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+			
+
+		let arr = [1, 2, 3];
+		// console.log( arr )
+		// console.log( Array.prototype )
+
+
+		// 写一个方法，让所有的数组都能够使用，调用这个方法就可以得到数组的和
+		// 方法里面的this调用者
+		Array.prototype.sum = function () {
+			// 定义变量
+			let he = 0;
+			// 遍历
+			for (let i = 0; i < this.length; i++) {
+				he = he + this[i];
+			}
+			// 返回
+			return he;
+		}
+		console.log( arr.sum() );
+		let ary = [11, 22, 33];
+		console.log( ary.sum() );
+		console.log( Array.prototype );
+
+
+	</script>
+
+
+</body>
+</html>

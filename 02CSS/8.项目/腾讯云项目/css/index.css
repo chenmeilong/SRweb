@@ -1,0 +1,89 @@
+
+.nva{
+    background-color: #181c28;
+}
+.nva .wrapper{
+    height: 480px;
+    background-image: url(../images/banner.png );
+}
+.nva .wrapper .serve{
+    width: 250px;
+    height: 480px;
+    padding: 20px 20px 0;
+    background-color: #1b2a3f;
+}
+.nva .wrapper .serve li a{
+    display: block ;
+    height: 40px;
+    line-height: 40px;
+}
+
+.nva .wrapper .serve li a::after{
+    content: ">";
+    float: right;
+}
+
+.body{
+    background-color: #fff;
+}
+.body .wrapper{
+    height: 740px;
+    text-align: center;
+}
+
+.body .wrapper h2{
+    margin-top: 45px;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+}
+.body .wrapper h3{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.body .wrapper .box{
+    padding: 48px 50px 0;
+    height: 463px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.body .wrapper .box .course{
+    float: left;
+    width: 441px;
+    text-align: left;
+}
+
+.body .wrapper .box img{
+    height: 350px;
+    width: 580px;
+    float: right;
+}
+
+.body .wrapper .box .course h2{
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    font-size: 24px;
+}
+
+.body .wrapper .box .course p{
+    color: #000;
+    text-indent: 2em;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.body .wrapper .box .course button{
+    margin-top: 34px;
+    width: 164px;
+    height: 47px;
+    border: 2px solid orange;
+    background-color: white;
+    font-size: 16px;
+}

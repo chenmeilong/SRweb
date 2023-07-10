@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+			
+
+		// function fun (a, b) {
+		// 	console.log(this, a, b)
+		// }
+
+		// let obj = {uname : '张三丰', age : 22};
+
+		// // call：
+		// // 函数.call(this，arg1, arg2,......)
+		// // 函数调用call、call会调用函数执行，在执行的过程中，改变this的指向
+		// fun.call(obj, 1, 2);
+
+		// 属性：对象.属性
+		// 方法：对象.方法()
+
+		let obj = {
+			uname : '张三丰',
+			age : 22,
+			fei : function () {
+				console.log(this);
+			}
+		}
+
+		let o = {
+			uname : '李寻欢',
+			sex : '男'
+		}
+
+		obj.fei.call(o);
+
+
+	</script>
+	
+</body>
+</html>

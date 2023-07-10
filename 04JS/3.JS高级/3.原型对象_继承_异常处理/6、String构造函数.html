@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+		
+		// let str = 'abcd';
+		// let st1 = new String('abcd');
+
+		// 字符串其实和数组很相似
+		
+
+
+		// 属性：length
+		// let str = 'abcdefgabcd';
+		// console.log( str.length );
+		// console.log( str[1] );
+		// for (let i = 0; i < str.length; i++) {
+		// 	console.log( str[i] );
+		// }
+
+		
+
+		// trim：用于去除字符串两端空白
+		// let str = '            abc        defgabcd       ';
+		// console.log(str);
+		// console.log(str.trim());
+
+		// let str = 'abcdefgabcd';
+		// // // split：分割字符串
+		// let re = str.split('');
+		// console.log(re);z
+		
+
+		// let str = 'abcdeFGabcd';
+		// // toLowerCase：把字母转成小写
+		// // let re = str.toLowerCase();
+		// // toUpperCase：把字母转成大写
+		// let re = str.toUpperCase();
+		// console.log(re);
+
+		// let str = 'abcdefgabcd';
+		// // indexOf：查找某个元素首次出现的索引值，找不到就是-1
+		// // let re = str.indexOf('mm');
+		// // lastIndexOf：查找某个元素尾次出现的索引值，找不到就是-1
+		// let re = str.lastIndexOf('d')
+		// console.log(re);
+		
+		// 字符串截取：
+		let str = 'abcdefgabcd';
+		// 注意：如果只有一个参数，那么从这个索引值位置开始一直截取到最后
+		// slice：截取字符串
+		// 字符串.slice(start，end);从start索引值位置截取字符串截取到end索引位置
+		// 注意：end索引位置上的字符取不到
+		let re = str.slice(1, 4);
+		
+		// substring：截取字符串
+		// 字符串.substring(start，end)从start索引值位置截取字符串截取到end索引位置
+		// 注意：end索引位置上的字符取不到
+		// let re = str.substring(1, 4);
+		
+		// substr：截取字符串
+		// 字符串.substr(start, length)从start索引位置开始截取字符串，截取length个
+		// let re = str.substr(1, 4);
+		console.log(re)
+
+	</script>
+
+</body>
+</html>

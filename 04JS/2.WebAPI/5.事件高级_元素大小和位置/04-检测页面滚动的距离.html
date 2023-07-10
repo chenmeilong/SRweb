@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        console.log(document.documentElement) // 返回 html 元素
+        // 可以修改 但是不要带单位
+
+        // 先做页面滚动事件
+        window.addEventListener('scroll', function () {
+            // console.log(11) 
+            // 在得到页面滚动的距离  scrollTop
+            console.log(document.documentElement.scrollTop)  //document.documentElement其实就是HTML最外层标签
+            // document.documentElement.scrollTop = 500   //可以只给给值
+        })
+
+    </script>
+</body>
+
+</html>

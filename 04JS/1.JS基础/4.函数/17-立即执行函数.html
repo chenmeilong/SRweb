@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 立即执行函数  立即执行， 无需调用
+        //    let fn = function() {}
+        //    fn()
+        // 1 第一个小括号放的 形参   第二个小括号放的是实参
+        // (function () {
+        //     console.log(111)
+        // })()
+        // (function (x, y) {
+        //     console.log(x + y)
+        // })(1, 2)
+        // let num = 10
+        //     (function () {
+        //         // 防止变量污染
+        //         let num = 20
+        //     })()
+
+        // (function () {
+        //     console.log(111)
+        // }())
+        // (function fn() {
+        //     console.log(111)
+        // }())
+
+        // let num = 10
+        // let num = 20 
+        (function () {
+            console.log(111)
+        })();
+        let num = 10
+            ; (function () {
+                console.log(222)
+            })()
+    </script>
+</body>
+
+</html>

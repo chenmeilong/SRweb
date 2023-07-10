@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+
+	<script type="text/javascript">
+		// console.log(1, 2, 3, 4, 5, 6, 7, 8, 9,);
+
+		// 动态参数
+		
+		// function fun () {
+		// 	// 在函数内部有一个特殊的对象，ar8guments
+		// 	// arguments用于接受所有的实参
+		// 	// console.log( arguments );
+		// 	for (let i = 0; i < arguments.length; i++) {// arguments = [1, 2, 3......]
+		// 		console.log( arguments[i] );
+		// 	}
+		// }
+		// fun(1, 2, 3, 'a', 'b', 'c', 4, 5, 6, 7, 8, 9);
+
+
+		// 求若干个数的最大值
+		// 建议：
+			// 如果参数固定写形参，
+			// 参数不固定用arguments
+		function getMax () {
+			// arguments：
+			// 假设最大值
+			let max = arguments[0];
+
+			// 遍历比较
+			for (let i = 0; i < arguments.length; i++) {
+				if ( max < arguments[i] ) max = arguments[i];
+			}
+
+			console.log(max);
+
+		}
+
+		getMax(23, 66, 78, 123, 4, 9, 3, 12345, 456, 65,67, 34);// 参数不固定
+
+	</script>
+
+</body>
+</html>

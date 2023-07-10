@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+		
+
+		// 浅拷贝：只拷贝外面一层的
+
+		let obj = {
+			uname : '张三丰',
+			age : 22,
+			sex : '男',
+			color : ['red', 'blue', 'yellow', 'pink'],
+			message : {
+				score : 99,
+				index :6,
+			}
+		}
+
+		let newObj = {}
+
+		// 方法：
+		Object.assign(newObj, obj);   //浅拷贝
+		obj.age = 80
+		obj.message.index = 666;
+		console.log( obj, newObj );
+
+
+		// 遍历
+		// for ( let key in obj ) {
+		// 	newObj[key] = obj[key]
+		// }
+		// obj.message.index = 666;
+		// console.log(obj, newObj);
+
+
+
+
+		// newObj.uname = obj.uname;
+		// newObj.age = obj.age;
+		// newObj.sex = obj.sex;
+
+
+
+	</script>
+
+
+</body>
+</html>

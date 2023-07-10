@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		class Person {
+			// 静态成员
+			static language = '汉语';
+			static skin = 'yellow';
+
+			static eat () {
+				console.log('吃');
+			}
+
+			static he () {
+				console.log('喝');
+			}
+		}
+
+		// 实例化对象
+		let obj = new Person();
+		console.log(obj);
+
+		console.log( Person.language );
+		Person.eat();
+
+
+
+
+	</script>
+
+
+
+</body>
+</html>

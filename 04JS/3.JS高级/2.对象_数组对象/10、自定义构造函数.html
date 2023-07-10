@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+
+	<script type="text/javascript">
+		
+		// 自定义构造函数
+		// 建议：所有构造函数的首字母大写
+		// 构造函数里面this指向当前实力对象
+		function Person (uname, age, sex) {
+			// 设置属性
+			this.uname = uname;
+			this.age = age;
+			this.sex = sex;
+
+			this.eat = function () {
+				console.log('吃饭');
+			};
+			this.sing = function () {
+				console.log('唱歌');
+			}
+
+		}
+		let o = new Person('jack', 22, '男');
+		console.log( o );
+		console.log( Person.prototype );
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		// 一般如何使用
+		// 实例化对象
+
+		// let o1 = new Person('阿飞', 21, '男');
+		// console.log( o1 )
+
+	</script>
+
+
+
+</body>
+</html>

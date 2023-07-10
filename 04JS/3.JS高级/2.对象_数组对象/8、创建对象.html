@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		
+
+		// 1、字面量创建对象
+		let obj = {
+			// 属性名：属性值，
+			// 键值对
+			// 成员
+			uname : '张三丰',
+			age : 22,
+			sex : '男',
+			taiji : function () {
+				console.log('打太极');
+			},
+		}
+
+		// 属性：
+		// console.log( obj.uname );用于国定属性写法
+		// console.log( obj['age'] );用于动态属性的写法
+
+		// 方法:
+		// obj.taiji();
+		// console.log( obj.taiji );
+
+		for ( let key in obj ) {
+			console.log( obj[key] );
+		}
+
+		let arr = [1, 2, 3];
+
+		for (let k in arr) {
+			console.log( arr[k] );
+		}
+		console.log(obj);
+
+	</script>
+	
+</body>
+</html>

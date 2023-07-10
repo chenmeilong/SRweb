@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	
+
+	<script type="text/javascript">
+		
+		function Star (uname, age) {
+			this.uname = uname;
+			this.age = age;
+			this.sing = function () {
+				console.log('唱歌');
+			}
+		}
+
+
+		// 实例化对象
+		let obj = new Star('刘德华', 23);
+	
+		// Star构造函数也属于对象，对象身上就可以添加属性和方法
+		Star.language = '汉语';
+		Star.skin = '黄皮肤';
+		Star.chi = function () {
+			console.log (123);
+		}
+
+		console.log(Star.language);  //可访问静态变量
+		console.log(obj.language);  //不可访问静态变量
+		console.log(Star.uname);  //不可访问普通变量
+		console.log(obj.uname);  //可访问普通变量
+
+		console.log(obj)
+
+
+
+		// 我们把在构造函数身上直接添加的成员，称为静态成员   也叫静态变量（静态属性静态方法）
+			// 静态成员只能由构造函数访问
+		// 构造函数内部为实例对象准备的成员，称为实例成员   也叫普通变量 也叫非静态变量（实例属性和实例方法）
+			// 只能由实例对象访问
+
+
+	</script>
+
+
+	
+</body>
+</html>

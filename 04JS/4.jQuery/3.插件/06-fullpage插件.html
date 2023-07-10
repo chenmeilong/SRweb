@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-fullpage插件</title>
+    <!-- 导入 fullpage 配套样式 -->
+    <link rel="stylesheet" href="./fullpage/jquery.fullpage.css" />
+    <style>
+      .one {
+        background-color: yellowgreen;
+      }
+      .two {
+        background-color: skyblue;
+      }
+      .three {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section one">区域1</div>
+      <div class="section two">区域2</div>
+      <div class="section three">区域3</div>
+    </div>
+    <!-- 导入 jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <!-- 在 jQuery 之后导入 fullpage 插件 -->
+    <script src="./fullpage/jquery.fullpage.js"></script>
+    <script>
+      $('#fullpage').fullpage({
+        navigation: true,
+        navigationPosition: 'left',
+        anchors: ['one', 'two', 'three'],
+        afterLoad(anchor, index) {
+          console.log('anchor:', anchor)
+          console.log('index:', index)
+        },
+      })
+    </script>
+  </body>
+</html>

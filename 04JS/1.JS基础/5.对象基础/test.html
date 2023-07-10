@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        function father() {
+            this.num = 935;
+            this.work = ['read', 'write', 'listen'];
+        }
+        function son() {}
+        son.prototype = new father();
+        let son1 = new son();
+        let son2 = new son();
+        son1.num = 117;  //在son1 对象  为什么是新定义一个？？？？？？？
+        son1.work.pop();
+        console.log(son1);  //117
+        console.log(son2);  //935
+        console.log(son1.__proto__===son2.__proto__);  
+
+        // console.log(son2.work); //son1和son2原型是同一个，所以此时原型里的work是['read', 'write'] ？？不理解
+
+    </script>
+</body>
+</html>

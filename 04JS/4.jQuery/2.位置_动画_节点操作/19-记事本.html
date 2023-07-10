@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notebook</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <section class="todoapp">
+      <header class="header">
+        <h1>记事本</h1>
+        <!-- 输入框 -->
+        <input
+          id="addTodo"
+          class="new-todo"
+          placeholder="请输入内容"
+          autofocus
+        />
+      </header>
+      <section class="main">
+        <!-- 容器 -->
+        <ul class="todo-list" id="todoList">
+          <!-- 模板 -->
+          <!-- <li>
+            <div class="view">
+              <label>模板</label>
+              <button class="destroy"></button>
+            </div>
+          </li> -->
+        </ul>
+      </section>
+      <footer class="footer">
+        <!-- 计数区域 -->
+        <span class="todo-count">
+          合计:
+          <strong>0</strong>
+        </span>
+      </footer>
+    </section>
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+          (function () {
+          // 3.删除
+          function count () {
+            // console.log($('#todoList li'))
+            $('.todo-count strong').text($('#todoList li').length)
+          }
+          // 1.新增
+          $('#addTodo').keyup(function (e) {
+            if (e.keyCode === 13) {
+              // console.log('回车')
+              let value = $(this).val()
+              if (value !== '') {
+                console.log('输入了内容')
+                $('#todoList').append(`
+                <li style="display:none">
+                    <div class="view">
+                      <label>${value}</label>
+                      <button class="destroy"></button>
+                    </div>
+                  </li>`)
+                $('#todoList li')
+                  .last()
+                  .slideDown(function () {
+                    count()
+                  })
+                $(this).val('')
+              }
+            }
+          })
+
+          // 2.删除
+          $('#todoList').on('click', '.destroy', function () {
+            let $li = $(this)
+              .parent()
+              .parent()
+            $li.fadeOut(function () {
+              $(this).remove()
+              // $('.todo-count strong').text($('#todoList li').length)
+              count()
+            })
+          })
+        })()
+    </script>
+  </body>
+</html>

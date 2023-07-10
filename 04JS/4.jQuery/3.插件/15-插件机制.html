@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15-插件机制</title>
+    <style>
+      p {
+        color: #333;
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>15-插件机制</h3>
+    <p>
+      插件是 jQuery 提供的扩展机制 , 本质是往 jQuery 原型对象上添加方法
+    </p>
+    <!-- 测试标签 -->
+    <div class="box"></div>
+    <!-- 导入jQ -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1.基本使用
+      $.fn.extend({
+        sayHello () {
+          console.log('吃了没!')
+          console.log(this)
+        }
+      })
+      let $box = $('.box')
+      console.log('$box:', $box)
+      $box.sayHello()
+      // 2.修改背景色插件
+      $.fn.extend({
+        setBgColor (color) {
+          this.css('backgroundColor', color)
+        }
+      })
+      $('.box').setBgColor('orange')
+      $('p').setBgColor('pink')
+      $('h3').setBgColor('yellowgreen')
+    </script>
+  </body>
+</html>

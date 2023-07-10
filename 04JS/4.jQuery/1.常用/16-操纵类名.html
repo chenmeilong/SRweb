@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16-操纵类名</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+      .test {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+      }
+      .active {
+        background-color: red;
+        border: 5px solid skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>类名操作</h4>
+    <p>jQuery 中封装了为网页元素添加、移除、检测、切换类名的方法。</p>
+    <!-- 操纵的盒子 -->
+    <div class="test"></div>
+    <hr />
+    <!-- 测试用按钮 -->
+    <button class="add">添加类名</button>
+    <button class="remove">移除类名</button>
+    <button class="has">判断类名</button>
+    <button class="toggle">切换类名</button>
+
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1.  添加类名
+      $('.add').click(function () {
+        $('.test').addClass('active')
+      })
+
+      // 2. 移除类名
+      $('.remove').click(function () {
+        $('.test').removeClass('active')
+      })
+
+      // 3. 判断类名
+      $('.has').click(function () {
+        let res = $('.test').hasClass('active')
+        console.log('res:', res)
+      })
+
+      // 4. 切换类名
+      $('.toggle').click(function () {
+        $('.test').toggleClass('active')
+      })
+    </script>
+  </body>
+</html>

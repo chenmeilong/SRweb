@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>18-触发事件事件处理</title>
+    <style>
+      body {
+        padding: 0 30px 40px;
+      }
+
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>21-window事件绑定</h4>
+    <p>
+      使用 jQuery 为window对象绑定事件
+    </p>
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      //  1. 错误演示
+      // $('window').scroll(function () {
+      //   console.log('scroll')
+      // })
+
+      // 2. 正确写法 - 滚动
+      $(window).scroll(function () {
+        console.log('scroll')
+      })
+
+      // 3. 正确写法 - 点击
+      $(window).click(function () {
+        console.log('click')
+      })
+    </script>
+  </body>
+</html>

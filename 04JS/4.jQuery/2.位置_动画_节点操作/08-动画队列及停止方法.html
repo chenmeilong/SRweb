@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-动画队列及停止方法</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>动画队列及停止方法</h3>
+    <p>
+      通过jQuery为元素设置的多个动画会依次添加到动画队列中,并根据添加的顺序依次播放,可以通过
+      <b>stop</b> 方法停止
+    </p>
+
+    <button class="add">添加动画</button>
+    <button class="stop">停止当前动画</button>
+    <button class="stop2">传递1个true</button>
+    <button class="stop3">传递2个true</button>
+
+    <div class="box"></div>
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+      // 1.添加动画
+      $('.add').click(function () {
+        $('.box')
+          .slideUp(4000)
+          .slideDown(4000)
+          .hide(4000)
+          .show(4000)
+      })
+
+      // 2.不传递参数 stop()
+      $('.stop').click(function () {
+        $('.box').stop()
+      })
+
+      // 3.传递1个true stop(true)
+      $('.stop2').click(function () {
+        $('.box').stop(true)
+      })
+
+      // 4.传递2个true stop(true,true)
+      $('.stop3').click(function () {
+        $('.box').stop(true, true)
+      })
+    </script>
+  </body>
+</html>

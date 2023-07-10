@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 字符类 []
+        console.log(/[abc]/.test('abc'))
+        console.log(/[abc]/.test(''))
+        console.log(/[abc]/.test('andy'))
+        console.log(/[abc]/.test('baby'))
+        console.log(/[abc]/.test('cry'))
+        console.log(/[abc]/.test('die'))
+
+        console.log('############################');
+
+        // 字符类 [-] 连字符
+        console.log(/^[abc]$/.test('abc'))
+        console.log(/^[abc]$/.test('a'))
+        console.log(/^[abc]$/.test('b'))
+        console.log(/^[abc]$/.test('c'))
+        console.log(/^[abc]$/.test('cc'))
+        console.log('############################');
+        // 26个英文字母选其中的一个
+        console.log(/^[a-zA-Z]$/.test('d'))
+        console.log(/^[a-zA-Z]$/.test('D'))
+        console.log(/^[a-zA-Z]$/.test('DD'))
+        console.log(/^[a-zA-Z0-9]$/.test('6'))
+        console.log(/^[a-zA-Z0-9-_]$/.test('6'))
+
+        console.log(/^abc+$/.test('abcccc'))
+
+
+    </script>
+</body>
+
+</html>

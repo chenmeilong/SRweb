@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 随机数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        // 生成 1~10 之间的随机数
+        let random = getRandom(1, 10)
+        // console.log(random)
+        // 3. 用户输入 不断的弹框直到输入正确为止
+        while (true) {
+            let num = +prompt('请您输入一个数字：')
+            // 如果输入的大于随机数就提示猜大了
+            if (random < num) {
+                alert('私密马赛，你猜大了')
+            } else if (random > num) {
+                alert('比亚乃， 你猜小了')
+            } else {
+                alert(' 萨卡迪卡，正确')
+                break   // break 退出循环  return 退出函数
+            }
+            // 如果输入的小于随机数就提示猜小了
+            // 如果输入的正好就提示正确
+        }
+    </script>
+</body>
+
+</html>

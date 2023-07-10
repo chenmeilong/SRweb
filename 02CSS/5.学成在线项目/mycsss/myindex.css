@@ -1,0 +1,352 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+}
+/* 真正清除浮动的标签 */
+.clearfix::after {
+    /* content: '';
+    display: table; */
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+ul{list-style: none;}
+clearfix::after{
+    clear: both;
+}
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 100px;
+    background-color: #f3f5f7;
+    overflow: hidden;
+}
+
+.header .wrapper{
+    margin: 28px auto;
+    height: 42px;
+}
+.float{
+    float: left;
+}
+.header .wrapper .nva{
+    margin-left: 70px;
+}
+
+.header .wrapper .nva li{
+    margin-right: 26px;
+}
+
+.header .wrapper .nva li a{
+    padding: 0 9px 9px;
+    line-height: 42px;
+    font-family: MicrosoftYaHei;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #050505;
+}
+.header .wrapper .nva li a:hover{
+    border-bottom: 1px solid #00a4ff;
+}
+.header .wrapper .search{
+    margin-left: 59px;
+    border: solid 1px #00a4ff;
+    height: 42px;
+    width: 412px;
+}
+.header .wrapper .search input{
+    padding-left: 20px;
+    width: 360px;
+    height: 40px;
+    border: none;
+}
+.header .wrapper .search input::placeholder{
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 31px;
+	letter-spacing: 0px;
+	color: #bfbfbf;
+}
+.header .wrapper .search button{
+    border: none;
+}
+.header .wrapper .user{
+    height: 42px;
+    margin-left: 30px;
+    line-height: 42px;
+}
+.header .wrapper .user img{
+    vertical-align: middle;
+}
+
+.banner{
+    background-color: #1c036c;
+}
+.banner .wrapper{
+    height: 420px;
+    background-image: url("../images/banner2.png");
+}
+.banner .wrapper .left{
+    padding: 15px 20px 0;
+	width: 190px;
+	height: 420px;
+	background-color: rgba(0, 0, 0, .3);
+}
+.banner .wrapper .left a{
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	line-height: 44px;
+	letter-spacing: 1px;
+    color: #fff;
+}
+.banner .wrapper .left a:hover{
+    color: #00b4ff;
+}
+.banner .wrapper .left a span{
+    float: right;
+}
+
+.banner .wrapper .right{
+    float: right;
+    margin-top: 50px;
+    width: 228px;
+    height: 300px;
+    background-color: #fff;
+}
+.banner .wrapper .right h2{
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-family: MicrosoftYaHei-Bold;
+	font-size: 18px;
+	letter-spacing: 2px;
+	color: #ffffff;
+}
+.banner .wrapper .right .study{
+
+}
+.banner .wrapper .right .study dl{
+    width: 192px;
+    margin: 0 auto;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.banner .wrapper .right .study dt span:first-child{
+	font-family: FZLTCXHJW--GB1-0;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	line-height: 20px;
+	letter-spacing: 0px;
+	color: #4e4e4e;
+}
+.banner .wrapper .right .study dt span:last-child{
+    font-family: FZLTCXHJW--GB1-0;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0px;
+	color: #4e4e4e;
+}
+.banner .wrapper .right .study dd{
+    font-family: FZLTCXHJW--GB1-0;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0px;
+	color: #a5a5a5;
+}
+.banner .wrapper .right a{
+    display: block;
+    margin: 5px auto 0;
+    border: 1px solid #00a4ff;
+    width: 200px;
+    height: 41px;
+
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #00a4ff;
+    line-height: 41px;
+    text-align: center;
+}
+
+.recommend{
+    background-color: #f3f5f7;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+.recommend .wrapper .nva{
+    margin-top: 30px;
+    box-shadow: 0px 2px 3px 0px 
+    rgba(118, 118, 118, 0.2);
+    height: 60px;
+    background-color: #fff;
+}
+.recommend .wrapper .nva li{
+    float: left;
+}
+.recommend .wrapper .nva li a{
+    padding: 0 34px;
+    border-right: 1px solid #bfbfbf;
+    line-height: 60px;
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	color: #050505;
+}
+.recommend .wrapper .nva li:last-child a{
+    border: none;
+}
+
+.recommend .wrapper .nva li a:hover{color: #00a4ff;}
+
+.recommend .wrapper .nva button{
+    float: right;
+    margin-right: 26px;
+    border: none;
+    background: none;
+    line-height: 60px;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	color: #00a4ff;
+}
+
+.recommend .wrapper .title{
+    margin-top: 37px;
+    height: 40px;
+}
+.recommend .wrapper .title h2{
+    float: left;
+    font-family: MicrosoftYaHei;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #494949;
+}
+.recommend .wrapper .title a{
+    float: right;
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a5a5a5;
+}
+.recommend .wrapper .contens .box{
+    width: 228px;
+	height: 270px;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 5px 0px 
+		rgba(118, 118, 118, 0.5);
+}
+.recommend .wrapper .contens .box h3,.recommend .wrapper .contens .box p{
+    margin: 8px 24px 0;
+}
+.recommend .wrapper .contens .box h3 span:first-child{
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	color: #050505;
+}
+.recommend .wrapper .contens .box h3 span:last-child{
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	color: #606060;
+}
+.recommend .wrapper .contens .box p span:first-child{
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	color: #ff7c2d;
+}
+.recommend .wrapper .contens .box p span:last-child{
+	font-size: 12px;
+	color: #777777;
+}
+.recommend .wrapper .contens li{
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+.recommend .wrapper .contens li:nth-child(5n){
+    margin-right: 0;
+}
+
+.footer{
+    background-color: #fff;
+    
+}
+.footer .wrapper{
+    padding: 33px 35px 0 21px;
+    height: 417px;
+}
+.footer .wrapper .left{
+    float: left;
+}
+.footer .wrapper .left p{
+    margin-top: 25px;
+    font-family: SimSun;
+	font-size: 12px;
+	line-height: 18px;
+	color: #666666;
+}
+.footer .wrapper .left a{
+    display: block;
+    width: 120px;
+    height: 36px;
+    border: solid 1px #00a4ff;
+    text-align: center;
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	line-height: 36px;
+	color: #00a4ff;
+}
+.footer .wrapper .right{
+    float: right;
+}
+.footer .wrapper .right dl{
+    float: left;
+}
+.footer .wrapper .right dl:nth-child(2){
+    margin-left: 146px;
+}
+.footer .wrapper .right dl:nth-child(3){
+    margin-left: 121px;
+}
+.footer .wrapper .right dt{
+    margin-bottom: 15px;
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.footer .wrapper .right a{
+	font-family: SimSun;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: #333333;
+}

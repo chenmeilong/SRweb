@@ -1,0 +1,81 @@
+/* 全局样式 */
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: url(../images/bg.jpg);
+  color: #333333;
+  font-size: 12px;
+  font-family: "微软雅黑", "SimSun", "宋体", "Arial Narrow";
+}
+ul {
+  list-style-type: none;
+}
+
+div,
+ul {
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+}
+
+select,
+input,
+img,
+select {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #606060;
+}
+
+a:hover {
+  color: orange;
+}
+
+img {
+  max-width: 100%;
+}
+
+.w980 {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}

@@ -1,0 +1,172 @@
+.banner{
+    background-color: #f5f5f5;
+ }
+.banner .wrapper{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.banner .wrapper .img{
+    height: 500px;
+}
+.banner .wrapper .img ul{
+    width: 200%;
+}
+.banner .wrapper .img li{
+    float: left;
+}
+.banner .wrapper .img .prev,.banner .wrapper .img .next{
+    position: absolute;
+    top: 228px;
+    left: 260px;
+    width: 45px;
+    height: 45px;
+    background: rgba(0,0,0,.2) url('../images/sprites.png') 14px -60px;
+    border-radius: 50%;
+}
+.banner .wrapper .img .next {
+    left: 1185px;
+    background-position: -23px -60px;
+  }
+
+.banner .wrapper .img ol{
+    position: absolute;
+    left: 672px;
+    bottom: 31px;
+}
+.banner .wrapper .img ol li{
+    margin: 0 8px;
+    width: 10px;
+	height: 10px;
+	background-color: rgba(255,255,255,.43);
+	border-radius: 50%;
+}
+
+
+.banner .wrapper .img ol li.active{
+    background-color: rgba(255,255,255,1);
+}
+
+.banner .wrapper .nav{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    height: 500px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, .8);
+}
+.banner .wrapper .nav span{
+    font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #ffffff;
+}
+.banner .wrapper .nav a{
+    display: block;
+    padding-left: 36px;
+    padding-right: 19px;
+    line-height: 50px;
+}
+
+.banner .wrapper .nav a:hover{
+    background-color: #27ba9b;
+}
+.banner .wrapper .nav a::after{
+    content: '';
+    float: right;
+    display: inline-block;
+    margin-top: 19px;
+
+    width: 7px;
+    height: 15px;
+    background-image: url(../images/sprites.png);
+    background-position: -39px -109px;
+}
+.banner .wrapper .nav li span:nth-child(2){
+    margin-left: 16px;
+	font-size: 14px;
+}
+
+.new-goods .top{
+    margin-top: 48px;
+    margin-bottom: 35px;
+
+    height: 29px;
+}
+.new-goods .top h2{
+    float: left;
+    font-family: PingFangSC-Regular;
+	font-size: 29px;
+	color: #333333;
+    line-height: 1;
+}
+.new-goods .top span{
+    float: left;
+    margin-top: 9px;
+    margin-left: 34px;
+    font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #999999;
+}
+.new-goods .top a{
+    float: right;
+    margin-top: 9px;
+    font-family: PingFangSC-Regular;
+	font-size: 16px;
+	color: #999999;
+}
+
+.new-goods .goods-list li a .goods{
+    position: relative;
+    top: 0;
+    float: left;
+    margin-right: 8px;
+    height: 405px;
+    width: 304px;
+    text-align: center;
+    background-color: #f0f9f4;
+    transition: all 0.3s;
+}
+.new-goods .goods-list li a .goods:hover{
+    top: -3px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
+
+.new-goods .goods-list li:nth-child(4n) a .goods{
+    margin-right: 0px;
+}
+.new-goods .goods-list li a div img{
+    width: 304px;
+	height: 305px;
+}
+.new-goods .goods-list li a div h3{
+    margin-top: 20px;
+    font-family: PingFangSC-Regular;
+	font-size: 20px;
+	color: #333333;
+    line-height: 1;
+}
+.new-goods .goods-list li a div span{
+    display: block;
+    margin-top: 12px;
+    font-family: PingFangSC-Medium;
+	font-size: 23px;
+	color: #9a2e1f;
+}
+.new-goods .goods-list li a .goods::after{
+    content: "新品";
+    position: absolute;
+    top: 18px;
+    left: 17px;
+    border: 2px solid #27ba9b;
+    border-radius: 5px;
+	width: 28px;
+	height: 51px;
+    font-family: PingFangSC-Regular;
+	font-size: 18px;
+	color: #27ba9b;
+}
+
+
+

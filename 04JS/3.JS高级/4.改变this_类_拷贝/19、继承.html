@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+
+	<script type="text/javascript">
+		
+		// super：用于调用父类的方法
+		class Person {
+			constructor (uname, age, sex) {
+				this.uname = uname;
+				this.age = age;
+				this.sex = sex;
+			}
+
+			say () {
+				console.log('Pesrson说话');
+			}
+		}
+		class Star extends Person {
+			constructor (uname, age, sex, zx) {
+				super(uname, age, sex);
+				this.zx = zx;
+			}
+			say () {
+				super.say();
+				console.log('唱');
+			}
+		}
+
+		let o = new Star('阿飞', 22, '男', '帅');
+
+		console.log(o);
+		o.say();
+
+
+	</script>
+
+
+</body>
+</html>

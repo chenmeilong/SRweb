@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求数组最大值的函数
+        function getArrMaxValue(arr) {
+            // 声明一个max变量
+            // 把数组第一个值给 max
+            let max = arr[0]
+            // 开始遍历数组并比较
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+            }
+            // 返回这个最大值
+            return max
+        }
+        let maxplus = getArrMaxValue([1, 6, 2, 9, 3])
+        document.write(`数组的最大值是${maxplus}`)
+    </script>
+</body>
+
+</html>

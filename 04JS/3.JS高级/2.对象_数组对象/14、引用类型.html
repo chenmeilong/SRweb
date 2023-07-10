@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		// 变量传递给另外一个变量，称为数据传递
+		
+		// 值传递：会把数据复制一份传递，（简单类型）
+		// 引用传递：会把数据地址复制一份传递，（引用类型）
+			
+
+
+		// let n = 3;
+		// let m = n;
+		// n = 6;
+		// console.log(n, m);
+
+
+		// 引用类型
+		let obj = {
+			uname : '阿飞',
+			age : 22,
+			sex : '男'
+		}
+
+		let o = obj;
+
+		obj.uname = '二柱子';
+
+		console.log( obj, o );
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+		
+		// 把属性名当做变量名即可
+		let obj = {
+			uname : '张三丰',
+			age : 22,
+			sex : '男',
+			score : 99,
+			index : 6,
+		}
+
+		// // 把对象解开解构赋值给变量
+		// // 用冒号改名字
+		// let uname = '阿飞';
+		// let {uname:userName, sex} = {          //前面是属性，后面是值
+		// 	uname : '张三丰',
+		// 	age : 22,
+		// 	sex : '男',
+		// 	score : 99,
+		// 	index : 6,
+		// }
+		// console.log( userName, sex);
+
+
+		// let { dog:{uname} } = {
+		// 	uname : '张三丰',
+		// 	dog : {
+		// 		uname : '小狗子',
+		// 		age : 1,
+		// 	},
+		// 	age : 22,
+		// 	sex : '男',
+		// 	score : 99,
+		// 	index : 6,
+		// }
+		// console.log( uname );
+		
+
+		function person ( {uname, age, sex} ) {
+			// let uname = obj.uname;
+			// let age = obj.age;
+			// let sex = obj.sex;
+			console.log(`我叫${uname}今年${age}岁是${sex}性`);
+		}
+		person( {uname : '阿飞', age : 22, sex : '男'} )
+	</script>
+
+</body>
+</html>

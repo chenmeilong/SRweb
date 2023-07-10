@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <title>07-链式编程</title>
+    <style>
+      body {
+        padding: 0 30px 40px;
+      }
+
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>07-链式编程</h3>
+    <p>链式编程 通过点(.) 把多个操作连续的写下去, 形成和 链子 一样的结构</p>    
+    <!-- 测试用 输入框 -->
+    <input type="text" class="text" />
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1. 为输入框分别绑定 获得焦点 和失去焦点事件
+      // $('.text').focus(function () {
+      //   console.log('获得焦点')
+      // })
+      // $('.text').blur(function () {
+      //   console.log('失去焦点')
+      // })
+
+      // 2. 使用链式编程一次性绑定 获得焦点 失去焦点 内容改变事件
+      $('.text')
+        .focus(function () {
+          console.log('获得焦点')
+        })
+        .blur(function () {
+          console.log('失去焦点')
+        })
+        .change(function () {
+          console.log('内容改变')
+        })
+
+      // 3. 测试jQuery方法的返回值
+      // let $test = $('.text')
+      // let $test2 = $test.focus(function () {
+      //   console.log('获得焦点')
+      // })
+      // console.log($test === $test2)
+    </script>
+  </body>
+</html>

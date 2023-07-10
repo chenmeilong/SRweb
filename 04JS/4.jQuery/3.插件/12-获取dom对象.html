@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12-获取dom对象</title>
+    <style>
+      p {
+        color: #333;
+      }
+      video {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>12-获取dom对象</h3>
+    <p>
+      jQuery 封装了获取内部 dom 对象的方法
+    </p>
+    <!-- 测试标签 播放器 -->
+    <button class="play">播放</button>
+    <button class="pause">暂停</button>
+    <br />
+    <video src="./video/video.mp4"></video>
+    <!-- 测试标签 form -->
+    <form action="">
+      <input type="text" placeholder="请输入用户名" />
+      <br />
+      <input type="password" placeholder="请输入密码" />
+      <br />
+      <input type="button" class="reset" value="重置" />
+    </form>
+    <!-- 导入jQuery -->
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+      // 1.get方法
+      let $btn = $('button')
+      console.log('$btn:', $btn)
+      let pauseBtn = $btn.get(1)
+      console.log('pauseBtn:', pauseBtn)
+
+      // 2. 中括号
+      let playBtn = $btn[0]
+      console.log('playBtn:', playBtn)
+
+      // 3. 播放视频
+      $('.play').click(function () {
+        // $('video').play()
+        // $('video').trigger('play')    //触发play事件
+        let video = $('video')[0]        //把jquery对象转换成dom对象，因为jquery上没有play方法，需要使用原生dom的方法调用
+        console.log('video:', video)
+        video.play()
+      })
+
+      // 4. 暂停视频
+      $('.pause').click(function () {
+        // $('video').play()
+        // $('video').trigger('pause')
+        let video = $('video')[0]
+        console.log('video:', video)
+        video.pause()
+      })
+
+      // 5. 重置表单
+      $('.reset').click(function () {
+        // $('video').play()
+        // $('form').trigger('reset')
+        let form = $('form')[0]
+        console.log('form:', form)
+        form.reset()
+      })
+    </script>
+  </body>
+</html>

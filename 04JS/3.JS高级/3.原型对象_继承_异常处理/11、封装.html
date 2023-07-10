@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		// function fn () {}
+		
+		// 命名空间
+		// let obj = {
+		// 	uname : '阿飞',
+		// 	age : 22,
+		// };
+		// let o = {
+		// 	uname : '李寻欢',
+		// 	age : 23
+		// };
+
+
+		// 构造函数：当作模板
+		function Person (uname, age, height, weight) {
+			this.uname = uname;
+			this.age = age;
+			this.height = height;
+			this.weight = weight;
+
+			// 吃饭
+			this.eat = function () {
+				console.log('吃饭');
+			}
+
+			this.sleep = function () {
+				console.log('睡觉');
+			}
+		}
+
+		// 实例化
+		let obj1 = new Person('张飞', 22, '90kg', '189CM');
+		obj1.uname = '张飞飞';
+		console.log( obj1 );
+
+
+
+		let obj2 = new Person('关羽', 23, '90kg', '199CM');
+		console.log(obj2);
+
+	</script>
+	
+</body>
+</html>

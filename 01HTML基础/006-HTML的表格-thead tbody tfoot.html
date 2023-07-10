@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--这行代码的作用是告诉浏览器采用哪一种字符集打开当前页面。
+		注意：并不是设置当前页面的字符编码方式。-->
+    <meta charset="gbk" />
+    <title>
+      thead tbody tfoot 在table中不是必须的，只是这样做便于后期的JS代码的编写。
+    </title>
+  </head>
+  <body>
+    <table border="1px" width="50%">
+      <!--头-->
+      <thead>
+        <tr>
+          <th>员工编号</th>
+          <th>员工薪资</th>
+          <th>部门名称</th>
+        </tr>
+      </thead>
+
+      <!--体-->
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>b</td>
+          <td rowspan="2">f</td>
+        </tr>
+        <tr>
+          <td colspan="2">d</td>
+        </tr>
+      </tbody>
+
+      <!--脚-->
+      <tfoot>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

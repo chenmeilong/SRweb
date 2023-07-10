@@ -1,0 +1,30 @@
+o<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+
+	<script type="text/javascript">
+			
+
+		// 可以改变函数中的this
+		function fn () {
+			console.log(this);
+		}
+		let o = {uname : 'aaa'};
+
+		// fn();
+		fn.call(o)
+
+
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+	<script type="text/javascript">
+		
+
+		// 判断一个值是否是数组
+		// Array.isArray();
+		// let a = [1, 2, 3];
+		// let re = Array.isArray(a);
+		// console.log(re);
+
+
+
+		// 把伪数组转换为真数组
+		// Array.from(伪数组)
+		// 特别注意：要想把伪数组转换为真数组必须有length属性
+		let o = {
+			0 : 'a',
+			1 : 'b',
+			2 : 'c',
+			3 : 'd',
+			4 : 'e',
+			5 : 'f',
+			6 : 'h',
+			length : 4,
+		}
+
+		let ary = Array.from(o);
+
+		console.log( ary );
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 定义正则表达式   reg 里面存的是对象
+        let reg = /前端/
+        // 2. 检测是否匹配 test （重点）
+        let str = '我们大家都在学前端'
+        console.log(reg.test(str))   //匹配到返回true 没有匹配到返回false
+        // 3. 检索 exec()
+        console.log(reg.exec(str))  // 返回的是数组
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏</title>
+    <style>
+        body{
+            display: flex;
+            width: 100%;
+        }
+        .box1{
+            width: 300px;
+            min-height: 500px;
+            background-color: pink;
+        }
+        .box2{
+            flex: 1;
+            min-height: 500px;
+            background-color: aqua;
+            word-break: break-all;
+        }
+        @media (max-width:768px){
+            .box1{
+                display: none;
+            }
+
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="box1">left隐藏</div>
+    <div class="box2">45457878454212455787578454578784542124557875784545787845421245578757845457878454212455787578454578784542124557875784545787845421245578757845457878454212455787578454578784542124557875784545787845421245578757845457878454212455787578454578784542124557875784545787845421245578757845457878454212455787578454578784542124557875784545787845421245578757845457878454212455787578</div>
+    
+</body>
+</html>

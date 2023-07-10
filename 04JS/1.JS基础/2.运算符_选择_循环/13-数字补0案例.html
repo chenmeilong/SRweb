@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 用户输入数字
+        let num = prompt('请您输入一个数字')
+        // 2. 判断条件是 小于 10  则数字前面 + '0'   01 否则 不补
+        // let t = num >= 10 ? num : '0' + num
+        let t = num < 10 ? '0' + num : num
+        document.write(t)
+    </script>
+</body>
+
+</html> 

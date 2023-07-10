@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	
+	<script type="text/javascript">
+			
+			// 利用递归求n的阶乘
+
+			// //利用递归函数求1~n的阶乘 1 * 2 * 3 * 4 * ..n
+
+			// 求任意一个数的阶乘：n==>9：9X8X7X6X5X4X3X2X1
+
+			// function digui (n) {
+			// 	if ( n == 1) {
+			// 		return 1;
+			// 	}
+
+			// 	return n * digui(n-1);
+			// }
+			// console.log( digui(6) );
+
+
+			// 1、求斐波那契数列：兔子序列
+
+			// // 利用递归函数求斐波那契数列(兔子序列)  1、1、2、3、5、8、13、21...
+
+			// 求第n个数是几，n任意一个数大家可以自定义，比如10，20等
+
+			// 1、1、2、3、5、8、13、21...
+
+
+			function fb (n) {// n = 2
+
+				if (n == 1 || n == 2) {
+					return 1;
+				}
+
+				return fb(n-1) + fb(n-2);
+
+				// return fb(5) + fb(4);
+				// return fb(4) + fb(3) + fb(4);
+				// return fb(3) + fb(2); + fb(3) + fb(4);
+				// return fb(2) + fb(1) + fb(2); + fb(3) + fb(4);
+				// return 1 + 1 + 1 + fb(3) + fb(4);
+				// return 1 + 1 + 1 + 1 + 1 + fb(4);
+				// return 1 + 1 + 1 + 1 + 1 + fb(3) + fb(2);
+				// return 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1;
+			}
+
+			console.log( fb(6) );
+
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	
+
+	<script type="text/javascript">
+		
+
+
+		// console.log(this);
+		// this指向：
+		
+		// 1、普通函数：window，调用者
+		// function fn () {
+		// 	console.log(this);
+		// }
+		// fn();
+
+		// 2、构造函数：实例化对象
+		// function Perosn (uname, age) {
+		// 	this.uname = uname;
+		// 	this.age = age;
+		// 	console.log(this);
+		// }
+		// let obj1 = new Perosn('阿飞', 22);
+		// console.log(obj1);
+		// let obj2 = new Perosn('李寻欢', 23);
+		// console.log(obj2);
+
+		// 3、方法：调用者
+		// let obj = {
+		// 	uname : '张三丰',
+		// 	age : 22,
+		// 	fei : function () {
+		// 		console.log(this);
+		// 	}
+		// }
+		// obj.fei();
+
+		// 4、事件处理函数：事件源
+		// document.addEventListener('click', function () {
+		// 	console.log(this);
+		// });
+
+		// 5、定时器：window、调用者
+		// window.setInterval(function () {
+		// 	console.log(this);
+		// }, 1000)
+
+		// 6、自调用函数：window、调用者
+		// ;(function () {
+		// 	console.log(this);
+		// })()
+
+
+		function fn () {
+			console.log(this);
+		}
+		document.addEventListener('click', fn);
+	</script>
+	
+</body>
+</html>

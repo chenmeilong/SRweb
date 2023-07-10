@@ -1,0 +1,355 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.float{
+    float: left;
+}
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+}
+/* 真正清除浮动的标签 */
+.clearfix::after {
+    /* content: '';
+    display: table; */
+    clear: both;
+}
+
+body{
+    background-color: #f3f5f7;
+}
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    margin: 30px auto;
+    height: 42px;
+
+}
+
+.nav{
+    height: 42px;
+
+    margin-left: 70px;
+}
+
+.nav li{
+    margin-right: 26px;
+}
+
+.nav a{
+    padding: 0 9px 10px;
+    line-height: 42px;
+    font-family: MicrosoftYaHei;
+	font-size: 18px;
+    color: #050505;
+
+}
+
+.nav a:hover{
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search{
+    margin-left: 59px;
+    width: 412px;
+    height: 42px;
+    border: 1px solid #00a4ff;
+}
+.search input{
+    padding-left: 20px;
+    width: 360px;
+    height: 40px;
+    border: none;
+}
+.search input::placeholder{
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	color: #bfbfbf;
+}
+.search button{
+    border: none;
+    height: 40px;
+    width: 50px;
+    background-image: url("../images/btn.png");
+}
+
+.user{
+    margin-left: 30px;
+    height: 42px;
+    line-height: 42px;
+}
+.user img{
+    vertical-align:middle;
+}
+ 
+.banner{
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .wrapper{
+    height: 420px;
+    background-image: url("../images/banner2.png");
+}
+
+.banner .wrapper .left{
+    float: left;
+    padding: 13px 20px 0;
+    width: 190px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+
+.banner .wrapper .right{
+    float: right;
+    margin-top: 50px;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.banner .wrapper .left a{
+    font-size: 14px;
+    color: #fff;
+    line-height: 44px;
+}
+.banner .wrapper .left span{
+    float: right;
+}
+.banner .wrapper .left a:hover{
+    color: #00b4ff;
+}
+ 
+.banner .wrapper .right h2{
+	height: 48px;
+    background-color: #9bceea;
+    color: #fff;
+    line-height: 48px;
+    text-align: center;
+}
+.banner .wrapper .right .contens{
+    width: 192px;
+    margin: 0 auto;
+}
+.banner .wrapper .right .contens dt span:first-child{
+    font-family: FZLTCXHJW--GB1-0;
+	font-size: 16px;
+	font-weight: 700;
+	font-stretch: normal;
+	line-height: 20px;
+	color: #4e4e4e;
+}
+.banner .wrapper .right .contens dt span:last-child{
+    font-family: FZLTCXHJW--GB1-0;
+	font-size: 14px;
+	font-weight: 700;
+	font-stretch: normal;
+	line-height: 20px;
+	color: #4e4e4e;
+}
+.banner .wrapper .right .contens dl{
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.banner .wrapper .right a{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+	height: 41px;
+	border: solid 1px #00a4ff;
+
+    text-align: center;
+    line-height: 40px;
+
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #00a4ff;
+}
+
+.goods{
+    margin-top: 8px;
+    padding: 21px 30px;
+    width: 1200px;
+	height: 60px;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2)
+}
+.goods li a{
+    float: left;
+    padding: 0 35px;
+    border-left: 1px solid #bfbfbf;
+    font-size: 16px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #050505;
+    line-height: 16px;
+}
+.goods li:first-child a{
+    border: none;
+}
+.goods a.more{
+    float: right;
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #00a4ff;
+}
+
+.goods li a:hover{
+    color: #00a4ff;
+}
+
+.courseBody{
+    margin-top: 37px;
+}
+.courseBody .title{
+    height: 40px;
+}
+.courseBody .title h2{
+    float: left;
+    font-family: MicrosoftYaHei;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #494949;
+
+}
+.courseBody .title a{
+    float: right;
+    margin-right: 31px;
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a5a5a5;
+}
+.courseBody .course .box{
+	width: 228px;
+	height: 270px;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 5px 0px 
+		rgba(118, 118, 118, 0.5);
+}
+.courseBody .course .box dt{
+    margin: 10px 22px 0;
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 20px;
+	letter-spacing: 0px;
+	color: #050505;
+}
+.courseBody .course .box dd{
+    margin-top: 20px;
+    margin: 20px 22px 0;
+    font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #999999;
+}
+.courseBody .course .box dd span{
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #ff7c2d;
+}
+
+.courseBody .course li{
+    float: left;
+    margin-right : 15px;
+    margin-bottom: 15px;
+}
+.courseBody .course li:nth-child(5n){
+    margin-right: 0;
+}
+
+.footer{
+    margin-top: 40px;
+    height: 417px;
+    background-color: #fff;
+}
+.footer .wrapper{
+    padding: 33px 0 0 21px;
+}
+.footer .wrapper .left{
+    float: left;
+}
+.footer .wrapper .left p{
+    padding-top: 25px;
+    font-family: SimSun;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 18px;
+	letter-spacing: 0px;
+	color: #666666;
+}
+.footer .wrapper .left a{
+    display: block;
+	border: solid 1px #00a4ff;
+    width: 120px;
+	height: 36px;
+	font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 36px;
+	color: #00a4ff;
+    text-align: center;
+}
+
+.footer .wrapper .right{
+    float: right;
+}
+.footer .wrapper .right dl{
+    float: left;
+}
+.footer .wrapper .right dl:nth-child(2){
+    margin-left: 146px;
+}
+.footer .wrapper .right dl:nth-child(3){
+    margin-left: 121px;
+    margin-right: 31px;
+}
+.footer .wrapper .right dt{
+    margin-bottom: 15px;
+	font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.footer .wrapper .right dd{
+    font-family: SimSun;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.footer .wrapper .right dd a{
+    color: black;
+}

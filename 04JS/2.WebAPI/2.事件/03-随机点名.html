@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 40px;
+            border: 1px solid pink;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>开始抽奖吧</div>
+    <button>点击点名</button>
+    <script>
+        // 1. 获取元素  div 和 button 
+        let box = document.querySelector('div')
+        let btn = document.querySelector('button')
+        // 2. 随机函数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        // 声明一个数组
+        let arr = ['刘备', '曹操', 'pink老师']
+        // 3. 事件监听
+        btn.addEventListener('click', function () {
+            // 随机的数字
+            let random = getRandom(0, arr.length - 1)
+            // console.log(arr[random])
+            box.innerHTML = arr[random]
+            // 删除数组里面的元素  splice(从哪里删, 删几个)
+            arr.splice(random, 1)
+            // 如果数组没有了 长度为0，就要禁用按钮
+            if (arr.length === 0) {
+                // console.log('最后一个了')
+                btn.disabled = true
+                btn.innerHTML = '已经抽完'
+            }
+        })
+    </script>
+</body>
+
+</html>

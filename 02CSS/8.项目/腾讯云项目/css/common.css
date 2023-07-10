@@ -1,0 +1,80 @@
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: #2b303b;
+}
+.header .wrapper{
+    height: 40px;
+}
+.header .wrapper h1{
+    float: left;
+    font-size: 1px;
+
+}
+.header .wrapper h1 a img{
+    margin-top: 10px;
+}
+
+.header .wrapper ul{
+    float: right;
+} 
+
+.header .wrapper ul li{
+    float: left;
+}
+.header .wrapper ul li a{
+    padding: 0 8px;
+    border-right: 1px solid #fff;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+}
+.header .wrapper ul li:last-child a{
+    border: none;
+}
+
+
+.footer{
+    background-color: #2e3033;
+}
+.footer .wrapper{
+    height: 400px;
+    padding-top: 30px;
+}
+
+.footer .wrapper dl{
+    float: left;
+    width: 200px;
+}
+.footer .wrapper dl dt{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .wrapper dl dd a{
+    display: block;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.footer .wrapper  .purchase{
+    float: right;
+}
+.footer .wrapper  .purchase p{
+    font-size: 12px;
+    margin-bottom: 23px;
+    line-height: 1.5;
+}
+
+.footer .wrapper .purchase button{
+    width: 190px;
+    height: 32px;
+    background-color: #00a4ff;
+    border: none;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}

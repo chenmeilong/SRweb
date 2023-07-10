@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<script type="text/javascript">
+		 
+		function Person (uname, age) {
+
+			this.uname = uname;
+			this.age = age;
+
+			// this.sing = function () {
+			// 	console.log('构造是sing方法');
+			// }
+		}
+
+		// 每一个构造函数都有一个属性：prototype、这个属性指向了一个对象，称为原型对象或者原型
+		// 作用：共享方法，节省内存，当实例对象找不到成员的时候就会找原型对象上的成员
+		Person.prototype.sing = function () {
+			console.log('唱歌');
+		}
+		// console.log( Person.prototype );
+
+		// 实例化
+		let obj = new Person('张三丰', 22);
+
+		console.log(obj);
+		obj.sing();
+
+
+
+
+	</script>
+
+
+</body>
+</html>

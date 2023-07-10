@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	
+
+	<script type="text/javascript">
+		
+
+
+		function People () {
+			this.head = 1;
+			this.eyes = 2;
+			this.leg2 = 2;
+			this.height = '身高';
+			this.weight = '体重';
+
+			this.eat = function () {
+				console.log('吃');
+			}
+
+			this.walk = function () {
+				console.log('走路');
+			}
+
+			this.say = function () {
+				console.log('say')
+			}
+		}
+
+		// 明星
+		function Star () {
+			this.dalan = '打扮';
+			this.qian = '$$$';
+		}
+
+
+		// 继承：
+		// 1、公共构造函数的实例对象赋值给原型对象
+		Star.prototype = new People();
+		// 2、指回构造函数本身
+		Star.prototype.constructor = Star;
+
+		let ak = new Star();
+		console.log(ak);
+
+
+		// 运动员
+		function Player () {
+			this.suzhi = '好';
+			this.lihao = '天赋';
+		}
+
+		Player.prototype = new People();
+		Player.prototype.constructor = Player;
+
+		let c2 = new Player();
+        console.log(c2.__proto__);     //Player的原型对象
+        console.log(c2.__proto__.__proto__);  //Person的原型对象
+        console.log(c2.__proto__.__proto__.__proto__);  //object的原型对象
+        console.log(c2.__proto__.__proto__.__proto__.__proto__);   //null
+
+	</script>
+
+
+	
+</body>
+</html>

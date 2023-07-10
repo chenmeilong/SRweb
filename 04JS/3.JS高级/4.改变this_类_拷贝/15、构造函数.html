@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+
+	<script type="text/javascript">
+		// constructor：是一个特殊的方法，如果我们不写，那么会自动的帮我们创建这个构造方法
+		// 这个consntructor在实例化对象的时候就会执行
+		// 通常constructor用于接受参数，做初始化操作
+	
+		class Person {
+			constructor (uname, age) {
+				this.uname = uname;
+				this.age = age;
+			}
+
+			say () {
+				console.log('说话');
+			}
+
+			run () {
+				console.log('跑步');
+			}
+
+		}
+
+		let obj = new Person('张三丰', 22);
+		console.log(obj);
+
+
+		let obj1 = new Person('阿飞', 23);
+		console.log(obj1);
+			
+		class MyPerson {
+			head = 1;
+			legs = 2;
+			uname = '张三丰';
+			age =  22;
+		}
+
+
+		// let obj = new Person();
+		// console.log(obj);
+
+	</script>
+
+
+</body>
+</html>

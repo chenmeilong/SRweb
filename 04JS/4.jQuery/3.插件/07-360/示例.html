@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>360安全导航</title>
+    <!-- <link rel="stylesheet" href="./assets/fullpagev3/fullpage.min.css" /> -->
+    <link rel="stylesheet" href="./assets/fullpage/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      html,
+      body,
+      .fullpage {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fullpage" id="fullpage">
+      <!-- 第一屏 -->
+      <div class="section">
+        <!-- LOGO -->
+        <div class="logo"></div>
+        <!-- 文字 -->
+        <div class="text">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- 特征 -->
+        <div class="feature"></div>
+      </div>
+      <!-- 第二屏 -->
+      <div class="section">
+        <!-- 盾牌 -->
+        <div class="shield">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- 介绍 -->
+        <div class="intro"></div>
+      </div>
+      <!-- 第三屏 -->
+      <div class="section">
+        <!-- 介绍 -->
+        <div class="intro"></div>
+        <!-- 圆环 -->
+        <div class="circle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- 火箭 -->
+        <div class="rocket"></div>
+      </div>
+      <!-- 第四屏 -->
+      <div class="section">
+        <!-- 搜索框 -->
+        <div class="search">
+          <!-- 关键字 -->
+          <span class="key"></span>
+          <!-- 查询结果 -->
+          <div class="wrap">
+            <div class="tips"></div>
+          </div>
+        </div>
+        <!-- 介绍 -->
+        <div class="intro"></div>
+      </div>
+      <!-- 第五屏 -->
+      <div class="section">
+        <!-- 介绍 -->
+        <div class="intro"></div>
+        <div class="browser">
+          <!-- 背景 -->
+          <div class="bg"></div>
+          <!-- 工具栏 -->
+          <div class="swrap">
+            <span></span>
+          </div>
+          <!-- 边框线 -->
+          <div class="line"></div>
+          <div class="leftside border"></div>
+          <div class="topside border"></div>
+          <div class="rightside border"></div>
+          <div class="bottomside border"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/jquery/jquery-3.5.1.min.js"></script>
+    <!-- <script src="./assets/fullpagev3/fullpage.min.js"></script> -->
+    <script src="./assets/fullpage/jquery.fullPage.min.js"></script>
+    <script>
+      $('#fullpage').fullpage({
+        afterLoad: function (anchorLink, index) {
+          $('.section').removeClass('current')
+          // // 延时100毫秒执行
+          setTimeout(function () {
+            $('.section')
+              .eq(index - 1)
+              .addClass('current')
+          }, 100)   //这个延时有待探究   因为次函数刷新也会运行但是没有特效  原因还不知道
+        },
+      })
+    </script>
+  </body>
+</html>

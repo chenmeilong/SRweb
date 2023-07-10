@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="button" value="点击发生验证码">
+
+	<script type="text/javascript">
+		
+
+		// bind：函数.bind(this, arg1, arg2,......);
+		
+		function fn (a, b) {
+			console.log(this, a, b);
+		}
+		let obj = {uname : '李寻欢', age : 22};
+		// let re = fn.bind(obj);re();
+		fn.bind(obj, 123, 456)();
+
+		let btn = document.querySelector('input');
+		btn.addEventListener('click', function () {
+			// 禁用按钮
+			this.disabled = true;
+			// 开启定时器
+			setTimeout(function () {
+				this.disabled = false;
+			}.bind(this), 5000);    //仔细品bind
+		});
+
+	</script>
+	
+</body>
+</html>

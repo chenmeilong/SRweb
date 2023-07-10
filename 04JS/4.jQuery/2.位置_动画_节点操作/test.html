@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <section class="todoapp">
+      <header class="header">
+        <h1>记事本</h1>
+        <!-- 输入框 -->
+        <input
+          id="addTodo"
+          class="new-todo"
+          placeholder="请输入内容"
+          autofocus
+        />
+      </header>
+      <section class="main">
+        <!-- 容器 -->
+        <ul class="todo-list" id="todoList">
+          <!-- 模板 -->
+          <!-- <li>
+            <div class="view">
+              <label>模板</label>
+              <button class="destroy"></button>
+            </div>
+          </li> -->
+        </ul>
+      </section>
+      <footer class="footer">
+        <!-- 计数区域 -->
+        <span class="todo-count">
+          合计:
+          <strong>0</strong>
+        </span>
+      </footer>
+    </section>
+
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script>
+        $('#addTodo').keyup(function(e){
+            if (e.keyCode == 13 && $(this).val().trim().length){
+                $('#todoList').append( `<li style="display:none">
+                                            <div class="view">
+                                            <label>${$(this).val().trim()}</label>
+                                            <button class="destroy"></button>
+                                            </div>
+                                        </li>`)
+                $('#todoList li').last().slideDown(1000,count)
+                $(this).val('')
+
+            }
+        })
+        function count(){
+            $('.todo-count strong').text($('#todoList li').length)
+        }
+
+        $('#todoList').on('click','.destroy',function(){
+            $(this).parent().parent().slideUp(1000,function(){
+                $(this).remove()
+                count()
+            })
+        })
+        
+
+    </script>
+  </body>
+</html>
