@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",
+      // 跳过 node_modules 文件夹中目录
+      "skipLibCheck": true, 
+      // 使用了 Node.js 的模块解析方式
+      "moduleResolution": "Node",
+      "lib":["ES2017","DOM"],
+      "allowSyntheticDefaultImports": true,
+    },
+}
+  
