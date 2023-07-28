@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <script src="./lib/axios.js"></script>
-</head>
-<body>
-    <button id="btn1">发起GET请求</button>
-    <button id="btn2">发起POST请求</button> 
-    <button id="btn3">直接使用axios发起GET请求</button>
-    <button id="btn4">直接使用axios发起POST请求</button>
-    <script>
-        document.querySelector('#btn1').addEventListener('click', function () {
-            var url = 'http://www.liulongbin.top:3006/api/get'
-            var paramsObj = { name: 'zs', age: 20 }
-            axios.get(url, { params: paramsObj }).then(function (res) {
-                console.log(res.data)
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <style>
+            ul {
+                list-style: none;
+            }
+        </style>
+        <ul></ul>
+        <script>
+            var ul = document.querySelector('ul');
+            var person = { sex: '男', age: '25', name: '王大锤', height: 28, weight: 32 };
+            const _render = element => {
+                var str = `<li>姓名：<span>${person.name}</span></li>
+                           <li>性别：<span>${person.sex}</span></li>
+                           <li>年龄：<span>${person.age}</span></li>
+                           <li>身高：<span>${person.height}</span></li>
+                           <li>体重：<span>${person.weight}</span></li>`
+                element.innerHTML = str;
+            }
+            _render(ul);
+            // 补全代码
+            Object.keys(person).forEach(key =>{
+                let oldvalue = person[key]  //为什么这里要拿到值，get，set里面拿值会报错
+                console.log(oldvalue);
+                Object.defineProperty(person,key,{ 
+                    get(){ return oldvalue},
+                    set(value){ 
+                        oldvalue = value  //为什么这里能这样写，给值赋值？
+                        _render(ul)
+                    }
+                })
             })
-        })
-        
-    </script>
-</body>
+        </script>
+    </body>
 </html>

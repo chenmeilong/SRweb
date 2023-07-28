@@ -1,26 +1,21 @@
-async function fn() {
+ function fn() {
     console.log(0);
- 
     setTimeout(() => {
         console.log(1);
     }, 0);
- 
-    (async function() {      //前面加个await  结果就 不也一样了0213564
+    async function a() {      //前面加个await  结果就 不也一样了0213564
         console.log(2);
     
         setTimeout(() => {
             console.log(3);
         }, 0);
- 
         await new Promise(res => setTimeout(res, 1000))
- 
         setTimeout(() => {
             console.log(4);
         }, 1000);
- 
         console.log(5);
-    })()
- 
+    }
+    a()
     console.log(6)
 }
  

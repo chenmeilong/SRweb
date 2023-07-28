@@ -1,7 +1,5 @@
-
 async function fn() {
     console.log(0);
- 
     setTimeout(() => {
         console.log(1);
     }, 0);
@@ -12,7 +10,8 @@ async function fn() {
         }, 0);
  
         console.log(3);
-        resolve();
+        resolve(); //不管resolve在那结果都是一样的
+        // resolve(); //如果让没有这个resolve的话，后面的代码就不会执行了，一直在这里等着
         console.log(4);
  
         setTimeout(() => {

@@ -2,34 +2,27 @@
 
 async function fn() {
     console.log(0);
-    
     setTimeout(() => {
         console.log(1);
     }, 0);
- 
     await new Promise(resolve => {
         setTimeout(() => {
             console.log(2);
         }, 0);
- 
         console.log(3);
- 
         setTimeout(() => {
             console.log(4);
             resolve();
         }, 1000);
- 
         setTimeout(() => {
             console.log(5);
         }, 0);
     });
- 
     setTimeout(() => {
         console.log(6);
     }, 0);
     console.log(7);
 }
- 
 fn();
 // 0
 // 3

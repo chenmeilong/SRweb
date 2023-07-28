@@ -13,6 +13,5 @@ function sleep(second){
 async function bingfa(){
     let task = [sleep(1000),sleep(1000),sleep(1000)]
     await Promise.all(task)
-
 }
 bingfa()

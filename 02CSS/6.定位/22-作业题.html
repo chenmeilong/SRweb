@@ -10,34 +10,26 @@
             padding: 0;
             margin: 0;
         }
-        .box{
-            position: relative;
-            width: 711px;
-            height: 400px;
-            margin: 50px auto 0;
-            border: 4px solid orange;
-            background-image: url("./images/sed.jpg");
+        .mask{
+            background-color: aqua;
+            width: 200px;
+            height: 100px;
+            /* line-height: 100px; */
+
+        }
+        .chr{
+
+            background-color: blue;
+            margin: 0 auto;
+            /* display:inline-block; */
+            vertical-align: middle;
         }
 
-        .box .mask{
-            display: none;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-  
-            background: rgba(0, 0, 0, 0.5)  url("./images/arr.png") no-repeat center center
-        }
-
-        .box:hover .mask{
-            cursor: pointer;
-            display: block;
-        }
     </style>
 </head>
 <body>
-    <div class="box">
-        <div class="mask">
-        </div>
-    </div>
+    <p style="line-height: 200px; height: 200px; border: 1px solid black;">
+        <span style="vertical-align: middle;">Middle</span>
+      </p>
 </body>
 </html>
