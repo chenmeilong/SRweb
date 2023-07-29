@@ -5,13 +5,7 @@
 	<title>Document</title>
 </head>
 <body>
-	
-
-
-	
-
-	<script type="text/javascript">
-		
+	<script type="text/javascript">	
 		let obj = {
 			uname : '张三丰',
 			age : 22,
@@ -25,10 +19,7 @@
 				console.log('chi fan');          //拷贝函数会出现问题
 			}
 		}
- 
 		let newObj = {}
-
-
 		// 遍历
 		// 如果遇到obj[key]是复杂类型，再遍历操作
 		function kaobei (newObj, obj) {
@@ -48,17 +39,9 @@
 				}
 			}
 		}
-
 		kaobei(newObj, obj);
-
 		obj.message.index = 666;
-
 		console.log(obj, newObj);
-
-
-
 	</script>
-
-
 </body>
 </html>

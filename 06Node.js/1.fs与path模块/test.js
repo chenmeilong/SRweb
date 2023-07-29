@@ -1,5 +1,11 @@
-var F=function(){};  
-Object.prototype.a=function(){console.log('A');};
-Function.prototype.b=function(){console.log('B');};
-var f=new F();
-//f能访问到a、b吗？
+process.nextTick(() => {
+    console.log(1); 
+});
+new Promise((resolve) => {
+    resolve();
+}).then(() => {
+    console.log(2);
+});
+process.nextTick(() => {
+    console.log(3); 
+});

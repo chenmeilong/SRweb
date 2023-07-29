@@ -20,10 +20,10 @@ export default {
     //      this.$store.commit("addCount", 10)  // 提交mutations
     //   },
       ...mapMutations(['addCount']),
-      AddAsyncCount () {
-        // 原始形式 调用action
-        this.$store.dispatch('getAsyncCount', 1000)
-      },
+      // AddAsyncCount () {
+      //   // 原始形式 调用action
+      //   this.$store.dispatch('getAsyncCount', 1000)
+      // },
       ...mapActions(['getAsyncCount'])
   },
   computed: {
