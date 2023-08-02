@@ -39,7 +39,8 @@
 			}
 		},
 		//此处只是测试一下setup，暂时不考虑响应式的问题。
-		setup(){
+		setup(props,context){
+			console.log(props,context);
 			//数据
 			let name = '张三'
 			let age = 18

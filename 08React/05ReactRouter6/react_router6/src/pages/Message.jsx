@@ -28,14 +28,6 @@ export default function Message() {
 						return (
 							// 路由链接
 							<li key={m.id}>
-								<Link 
-									to="detail" 
-									state={{
-										id:m.id,
-										title:m.title,
-										content:m.content,
-									}}
-								>{m.title}</Link>
 								<button onClick={()=>showDetail(m)}>查看详情</button>
 							</li>
 						)

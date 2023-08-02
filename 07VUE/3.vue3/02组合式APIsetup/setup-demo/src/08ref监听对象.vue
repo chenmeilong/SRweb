@@ -21,7 +21,7 @@
 			//数据
 			let sum = ref(0)
 			let msg = ref('你好啊')
-			let person = ref({
+			let person = reactive({
 				name:'张三',
 				age:18,
 				job:{
@@ -37,13 +37,18 @@
 
 			//ref监听对象监听不到数据改变的解决办法
 			//法一 deep:true 因为ref会把对象数据自动转换成reactive对象使用proxy
-			watch(person,(newValue,oldValue)=>{
-				console.log('person的值变化了',newValue,oldValue)
-			},{deep:true})
+			// watch(person,(newValue,oldValue)=>{
+			// 	console.log('person的值变化了',newValue,oldValue)
+			// },{deep:true})
 			//法二 person.value是一个reactive对象
 			// watch(person.value,(newValue,oldValue)=>{
 			// 	console.log('person的值变化了',newValue,oldValue)
 			// },)
+
+      // reactive
+			// watch(person,(newValue,oldValue)=>{
+			// 	console.log('person的值变化了',newValue,oldValue)
+			// },{deep:false})
 
 
 			//返回一个对象（常用）

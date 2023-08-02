@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css"
 Vue.filter("reverse", (val,s)=>val.split("").reverse().join(s))
 
 Vue.config.productionTip = false
-
+console.log(App);
 new Vue({
   render: h => h(App),
 }).$mount('#app')
