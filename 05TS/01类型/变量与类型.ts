@@ -13,7 +13,7 @@ let list1: number[] = [1, 2, 3];
 let list2: Array<number> = [1, 2, 3];
 //元组
 let x: [string, number];
-x = ['hello', 10]; // OK  访问// x[0]
+x = ['hello', 10]; // OK  访问// x[0] 
 //枚举
 enum Color {Red, Green, Blue} //默认情况下，从0   开始为元素编号 
 let c: Color = Color.Green; 
@@ -44,3 +44,5 @@ function func({ a, b = 0 } = { a: "" }): void {
 func({ a: "yes" }); // ok, default b = 0
 func(); // ok, default to {a: ""}, which then defaults b = 0
 // func({}); // error, 'a' is required if you supply an argument
+
+console.log('##');

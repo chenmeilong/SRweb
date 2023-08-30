@@ -1,5 +1,16 @@
-/** @type {number} */
-var x;
+function asyncTask() {
+    return new Promise((resolve, reject) => {
+        
+        setTimeout(() => {
+        resolve();
+        }, 1000);
+        return '##'
+    });
+}
 
-x = 0;      // OK
-x = false;  // Error: boolean is not assignable to number
+asyncTask()
+.then(result => {
+    console.log(result); // 输出 'Async task completed'
+})
+
+  
